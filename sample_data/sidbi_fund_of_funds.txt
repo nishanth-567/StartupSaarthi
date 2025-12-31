@@ -1,0 +1,94 @@
+# SIDBI Fund of Funds Scheme
+
+## Overview
+
+The SIDBI Fund of Funds (FFS) is a flagship scheme by the Small Industries Development Bank of India (SIDBI) to support the startup ecosystem in India. Launched in 2016 as part of the Startup India initiative, the scheme aims to provide capital to venture capital funds that invest in startups.
+
+## Key Features
+
+### Corpus
+- Initial corpus: ₹10,000 crore
+- Managed by SIDBI
+- Deployed through SEBI-registered Alternative Investment Funds (AIFs)
+
+### Investment Structure
+- SIDBI invests in AIFs/Venture Capital Funds
+- These funds then invest in startups
+- Focus on early-stage and growth-stage startups
+
+### Eligibility Criteria
+
+**For Venture Capital Funds:**
+- Must be SEBI-registered Category I or Category II AIF
+- Minimum fund size of ₹50 crore
+- Track record of investing in startups
+- Professional fund management team
+
+**For Startups:**
+- Recognized under Startup India initiative
+- Incorporated in India
+- Focus on innovation and scalability
+- Technology-driven business models
+
+### Sectors Covered
+- Technology and IT
+- Healthcare and Biotechnology
+- Clean Energy
+- Manufacturing
+- Agriculture Technology
+- Financial Technology
+- Education Technology
+
+## Investment Process
+
+1. **Application**: Venture Capital Funds apply to SIDBI
+2. **Due Diligence**: SIDBI evaluates fund credentials
+3. **Commitment**: SIDBI commits capital to selected funds
+4. **Deployment**: Funds invest in eligible startups
+5. **Monitoring**: Regular reporting and oversight
+
+## Benefits
+
+### For Startups
+- Access to institutional capital
+- Mentorship from experienced investors
+- Networking opportunities
+- Credibility enhancement
+
+### For Venture Capital Funds
+- Long-term patient capital
+- Reduced fundraising pressure
+- Government backing
+
+## Impact (as of 2024)
+
+- Over 100 AIFs supported
+- ₹8,500+ crore committed
+- 800+ startups funded indirectly
+- Pan-India presence
+- Multiple sectors covered
+
+## Contact Information
+
+**SIDBI Headquarters**
+- Address: SIDBI Tower, 15 Ashok Marg, Lucknow - 226001
+- Website: www.sidbi.in
+- Email: ffs@sidbi.in
+- Phone: 0522-4259100
+
+## Related Schemes
+
+- Startup India Seed Fund Scheme
+- Credit Guarantee Scheme for Startups
+- SIDBI Make in India Soft Loan Fund
+
+## Recent Updates (2024)
+
+- Increased focus on deep-tech startups
+- Special allocation for women-led startups
+- Green finance initiatives
+- Enhanced monitoring mechanisms
+
+---
+
+*This document is for informational purposes. Please verify details with SIDBI official sources.*

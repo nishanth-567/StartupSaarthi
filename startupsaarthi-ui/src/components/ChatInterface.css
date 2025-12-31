@@ -1,0 +1,228 @@
+/* Chat Interface Styles */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    gap: var(--spacing-lg);
+}
+
+.chat-header {
+    padding: var(--spacing-lg);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.logo-icon {
+    color: var(--primary-400);
+}
+
+.chat-header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.deterministic-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.deterministic-toggle input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.lang-icon {
+    color: var(--text-tertiary);
+}
+
+.messages-container {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+}
+
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    gap: var(--spacing-lg);
+}
+
+.welcome-screen h2 {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-screen p {
+    color: var(--text-secondary);
+    max-width: 500px;
+}
+
+.example-queries {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+    max-width: 500px;
+}
+
+.example-btn {
+    padding: var(--spacing-md);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: left;
+}
+
+.example-btn:hover {
+    border-color: var(--primary-500);
+    background: var(--bg-tertiary);
+    transform: translateX(4px);
+}
+
+.message {
+    display: flex;
+    width: 100%;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.assistant {
+    justify-content: flex-start;
+}
+
+.message-content {
+    max-width: 80%;
+    padding: var(--spacing-lg);
+}
+
+.message.user .message-content {
+    background: var(--accent-gradient);
+    color: white;
+}
+
+.message.assistant .message-content {
+    background: var(--glass-bg);
+}
+
+.message-content p {
+    margin: 0 0 var(--spacing-sm) 0;
+}
+
+.message-content p:last-child {
+    margin-bottom: 0;
+}
+
+.sources-section {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.sources-section h4 {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.source-item {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    padding: var(--spacing-xs) 0;
+}
+
+.source-item strong {
+    color: var(--primary-400);
+}
+
+.loading-message {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+}
+
+.input-container {
+    padding: var(--spacing-md);
+}
+
+.input-form {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.message-input {
+    flex: 1;
+}
+
+.send-btn {
+    min-width: 100px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chat-container {
+        padding: var(--spacing-sm);
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .message-content {
+        max-width: 90%;
+    }
+
+    .example-queries {
+        max-width: 100%;
+    }
+}
