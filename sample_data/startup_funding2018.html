@@ -1,0 +1,4311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>startup_funding2018</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .info {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Startup Funding2018</h1>
+    
+    <div class="info">
+        <strong>Source:</strong> startup_funding2018.csv<br>
+        <strong>Total Records:</strong> 526<br>
+        <strong>Columns:</strong> 6
+    </div>
+    
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-value">526</div>
+            <div class="stat-label">Total Rows</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">6</div>
+            <div class="stat-label">Total Columns</div>
+        </div>
+    </div>
+    
+    <h2>Data Preview (First 1000 rows)</h2>
+<table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Company Name</th>
+      <th>Industry</th>
+      <th>Round/Series</th>
+      <th>Amount</th>
+      <th>Location</th>
+      <th>About Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TheCollegeFever</td>
+      <td>Brand Marketing, Event Promotion, Marketing, Sponsorship, Ticketing</td>
+      <td>Seed</td>
+      <td>250000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>TheCollegeFever is a hub for fun, fiesta and frolic of Colleges.</td>
+    </tr>
+    <tr>
+      <td>Happy Cow Dairy</td>
+      <td>Agriculture, Farming</td>
+      <td>Seed</td>
+      <td>₹40,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>A startup which aggregates milk from dairy farmers in rural Maharashtra.</td>
+    </tr>
+    <tr>
+      <td>MyLoanCare</td>
+      <td>Credit, Financial Services, Lending, Marketplace</td>
+      <td>Series A</td>
+      <td>₹65,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Leading Online Loans Marketplace in India</td>
+    </tr>
+    <tr>
+      <td>PayMe India</td>
+      <td>Financial Services, FinTech</td>
+      <td>Angel</td>
+      <td>2000000</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>PayMe India is an innovative FinTech organization which offers short term financial suport to corporate employees.</td>
+    </tr>
+    <tr>
+      <td>Eunimart</td>
+      <td>E-Commerce Platforms, Retail, SaaS</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>Eunimart is a one stop solution for merchants to create a difference by selling globally.</td>
+    </tr>
+    <tr>
+      <td>Hasura</td>
+      <td>Cloud Infrastructure, PaaS, SaaS</td>
+      <td>Seed</td>
+      <td>1600000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Hasura is a platform that allows developers to build, deploy, and host cloud-native applications quickly.</td>
+    </tr>
+    <tr>
+      <td>Tripshelf</td>
+      <td>Internet, Leisure, Marketplace</td>
+      <td>Seed</td>
+      <td>₹16,000,000</td>
+      <td>Kalkaji, Delhi, India</td>
+      <td>Tripshelf is an online market place for holiday packages.</td>
+    </tr>
+    <tr>
+      <td>Hyperdata.IO</td>
+      <td>Market Research</td>
+      <td>Angel</td>
+      <td>₹50,000,000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>Hyperdata combines advanced machine learning with human intelligence.</td>
+    </tr>
+    <tr>
+      <td>Freightwalla</td>
+      <td>Information Services, Information Technology</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Freightwalla is an international forwarder thats helps you manage supply chain by providing online tools including instant quotations.</td>
+    </tr>
+    <tr>
+      <td>Microchip Payments</td>
+      <td>Mobile Payments</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Microchip payments is a mobile-based payment application and point-of-sale device</td>
+    </tr>
+    <tr>
+      <td>BizCrum Infotech Pvt. Ltd.</td>
+      <td>B2B, Shoes</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Delhi, Delhi, India</td>
+      <td>Building Transactionary B2B Marketplaces</td>
+    </tr>
+    <tr>
+      <td>Emojifi</td>
+      <td>Internet</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Emojifi is an app that provides live emoji, stickers & GIFs suggestions based on the typed words across chat platforms.</td>
+    </tr>
+    <tr>
+      <td>Flock</td>
+      <td>Apps, Collaboration, Developer Platform, Enterprise Software, Messaging, Productivity Tools, Video Chat</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>India, Asia</td>
+      <td>Flock is a real-time messaging and collaboration app for teams that speeds up and simplifies communication and boosts productivity.</td>
+    </tr>
+    <tr>
+      <td>Freshboxx</td>
+      <td>Food Delivery</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Hubli, Karnataka, India</td>
+      <td>Freshboxx is incubated at Sandbox Startups, a unit of the Deshpande Foundation.</td>
+    </tr>
+    <tr>
+      <td>Wide Mobility Mechatronics</td>
+      <td>Industrial Automation</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Wide Mobility Mechatronics is a Private Company limited by Shares</td>
+    </tr>
+    <tr>
+      <td>Pitstop</td>
+      <td>Automotive, Search Engine, Service Industry</td>
+      <td>Seed</td>
+      <td>₹100,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Pitstop offers general repair and maintenance services for cars through its doorstep service vehicles.</td>
+    </tr>
+    <tr>
+      <td>Mihuru</td>
+      <td>Finance, Internet, Travel</td>
+      <td>Seed</td>
+      <td>150000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Mihuru is an online platform which gives micro loans for air travel .</td>
+    </tr>
+    <tr>
+      <td>Fyle</td>
+      <td>Accounting, Business Information Systems, Business Travel, Finance, SaaS</td>
+      <td>Seed</td>
+      <td>1100000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Fyle is an intelligent expense management platform for enterprises.</td>
+    </tr>
+    <tr>
+      <td>AppWharf</td>
+      <td>Artificial Intelligence, Product Search, SaaS, Service Industry, Software</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Appwharf is an intelligent assistant that helps find you the best-fit SaaS for your business.</td>
+    </tr>
+    <tr>
+      <td>Antariksh Waste Ventures Pvt ltd</td>
+      <td>Internet of Things, Waste Management</td>
+      <td>Seed</td>
+      <td>₹500,000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Waste Management for Smart Cities</td>
+    </tr>
+    <tr>
+      <td>Cogoport</td>
+      <td>Air Transportation, Freight Service, Logistics, Marine Transportation</td>
+      <td>Series A</td>
+      <td>6000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Cogoport is a platform that provides freight buying industry with spot rates and bidding process for freight buyers.</td>
+    </tr>
+    <tr>
+      <td>PaisaDukan</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>650000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>A P2P lending marketplace platform</td>
+    </tr>
+    <tr>
+      <td>Sleepy Owl Coffee</td>
+      <td>Food and Beverage</td>
+      <td>Seed</td>
+      <td>₹35,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Makers of a signature coffee that's exceptional in taste. It's super easy to brew, requires no equipment & ships to your door.</td>
+    </tr>
+    <tr>
+      <td>BlueJack</td>
+      <td>Autonomous Vehicles</td>
+      <td>Seed</td>
+      <td>₹64,000,000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>Delhi-based online used vehicles marketplace.</td>
+    </tr>
+    <tr>
+      <td>PregBuddy</td>
+      <td>Enterprise Software, Health Care, Hospital, Parenting, Personal Health, SaaS</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>PregBuddy is a smart connected care platform for expecting mothers.</td>
+    </tr>
+    <tr>
+      <td>AgNext Technologies</td>
+      <td>Agriculture, Analytics, Big Data, Farming</td>
+      <td>Series A</td>
+      <td>—</td>
+      <td>Mohali, Punjab, India</td>
+      <td>AgNext is an agricultural sensing and solutions company focused on building data-driven solutions for agricultural stakeholders</td>
+    </tr>
+    <tr>
+      <td>Pando</td>
+      <td>Logistics, Supply Chain Management</td>
+      <td>Seed</td>
+      <td>2000000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>A startup which digitizes logistics operations for Fortune 500 companies.</td>
+    </tr>
+    <tr>
+      <td>Mintifi</td>
+      <td>Financial Services, Lending</td>
+      <td>Seed</td>
+      <td>2000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Online lending startup based in Mumbai.</td>
+    </tr>
+    <tr>
+      <td>Carcrew</td>
+      <td>Automotive, Marketplace, Online Portals</td>
+      <td>Seed</td>
+      <td>2000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>India's Online Auto Repair Marketplace</td>
+    </tr>
+    <tr>
+      <td>NicheAI</td>
+      <td>Artificial Intelligence</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>Early stage Artificial Intelligence (AI) start up.</td>
+    </tr>
+    <tr>
+      <td>Chariot Tech</td>
+      <td>Internet of Things, Telecommunications</td>
+      <td>Seed</td>
+      <td>₹20,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Chariot Tech is an Internet of Things (IoT) startup based in New Delhi.</td>
+    </tr>
+    <tr>
+      <td>Ideal Insurance Brokers/ 121Policy.com</td>
+      <td>Insurance</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Kolkata, West Bengal, India</td>
+      <td>Ideal Insurance Broking is one of the leaders in insurance broking domain.</td>
+    </tr>
+    <tr>
+      <td>Loanzen</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Loanzen helps small businesses get unsecured working capital loans against their their pending invoices.</td>
+    </tr>
+    <tr>
+      <td>Mojro Technologies</td>
+      <td>Information Technology, Logistics, Supply Chain Management</td>
+      <td>Seed</td>
+      <td>650000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Mojro envisions to be the world's largest technology-enabled logistics platform.</td>
+    </tr>
+    <tr>
+      <td>Elemential</td>
+      <td>Blockchain, Developer Tools, Enterprise Software</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Blockchain Development Platform To Design, Run & Scale Blockchain Networks.</td>
+    </tr>
+    <tr>
+      <td>Loadshare</td>
+      <td>Industrial Automation, Logistics, Supply Chain Management</td>
+      <td>Series A</td>
+      <td>5000000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>LoadShare is India’s fastest growing logistics company</td>
+    </tr>
+    <tr>
+      <td>Yumlane</td>
+      <td>Food and Beverage, Food Delivery, Snack Food</td>
+      <td>Series A</td>
+      <td>4000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Food startup Yumlane operated by QwikPik Technology</td>
+    </tr>
+    <tr>
+      <td>Kriger Campus</td>
+      <td>Education</td>
+      <td>Seed</td>
+      <td>₹30,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>A Education Start Up.</td>
+    </tr>
+    <tr>
+      <td>Pipa+Bella</td>
+      <td>E-Commerce, Fashion, Jewelry, Retail</td>
+      <td>Series A</td>
+      <td>1000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Pipa+Bella is an online store aimed at selling fashionable and affordable costume jewelry at par with international standards and trends</td>
+    </tr>
+    <tr>
+      <td>Kaleidofin</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>2800000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>A fintech platform.</td>
+    </tr>
+    <tr>
+      <td>Chakr Innovation</td>
+      <td>Renewable Energy</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Chakr has developed the world’s first retro-fit emission control device for diesel generators.</td>
+    </tr>
+    <tr>
+      <td>IndigoLearn</td>
+      <td>E-Learning, Education</td>
+      <td>Seed</td>
+      <td>150000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>India's the premier education destination catering to the needs of aspiring students of the CA community.</td>
+    </tr>
+    <tr>
+      <td>UClean</td>
+      <td>Clean Energy, CleanTech, Laundry and Dry-cleaning</td>
+      <td>Seed</td>
+      <td>₹40,000,000</td>
+      <td>India, Asia</td>
+      <td>UClean is a tech enabled laundry service provider.</td>
+    </tr>
+    <tr>
+      <td>Coutloot</td>
+      <td>E-Commerce, Fashion, Mobile</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>The Fashion Re-commerce platform.</td>
+    </tr>
+    <tr>
+      <td>Letstrack</td>
+      <td>Apps, Messaging, Navigation, Public Safety</td>
+      <td>Seed</td>
+      <td>1700000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Letstrack GPS tracking devices to track your kids, bike, car and other vehicles. GPS trackers for Vehicle Tracking System in India.</td>
+    </tr>
+    <tr>
+      <td>Pooltoo</td>
+      <td>Transportation</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Pooltoo offers a premium ride sharing platform.</td>
+    </tr>
+    <tr>
+      <td>Finzy</td>
+      <td>Financial Services, Lending</td>
+      <td>Seed</td>
+      <td>1300000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>finzy is the premier peer to peer lending solution in India.</td>
+    </tr>
+    <tr>
+      <td>Fitternity</td>
+      <td>Fitness, Health Care, Wellness</td>
+      <td>Seed</td>
+      <td>2000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>India's largest online fitness platform that provides an integrated eco-system to help users start & sustain their fitness journey</td>
+    </tr>
+    <tr>
+      <td>Keito</td>
+      <td>Artificial Intelligence, Machine Learning, SaaS, Virtual Assistant</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Building an Intelligent Digital Assistant.</td>
+    </tr>
+    <tr>
+      <td>Tolet for Students</td>
+      <td>Hospitality</td>
+      <td>Seed</td>
+      <td>₹5,000,000</td>
+      <td>Jodhpur, Rajasthan, India</td>
+      <td>Reserve your Room, Hostel or Paying Guest, while relocating for higher education.</td>
+    </tr>
+    <tr>
+      <td>Chai Kings</td>
+      <td>Food and Beverage, Tea</td>
+      <td>Seed</td>
+      <td>₹20,000,000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Chai Kings is a tea retail chain</td>
+    </tr>
+    <tr>
+      <td>Dainik Jagran</td>
+      <td>Media and Entertainment, News, Outdoors</td>
+      <td>Seed</td>
+      <td>₹40,000,000</td>
+      <td>Kanpur, Uttar Pradesh, India</td>
+      <td>Dainik Jagran is a media and communications group.</td>
+    </tr>
+    <tr>
+      <td>Playtoome</td>
+      <td>Broadcasting, Media and Entertainment, Music, Music Streaming, Video, Video Streaming</td>
+      <td>Seed</td>
+      <td>₹20,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Playtoome is a live entertainment destination</td>
+    </tr>
+    <tr>
+      <td>ONGO Framework</td>
+      <td>B2B, Information Services, Information Technology</td>
+      <td>Angel</td>
+      <td>1000000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>ONGO Framework is a B2B IT and digital solution provider.</td>
+    </tr>
+    <tr>
+      <td>Notesgen</td>
+      <td>EdTech, Education, Enterprise Software, Peer to Peer</td>
+      <td>Seed</td>
+      <td>₹12,500,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>A Global Peer-to-Peer and Peer-to-Group Learning Platform that helps students supplement their academic & competitive exam prep.</td>
+    </tr>
+    <tr>
+      <td>Arogya MedTech</td>
+      <td>Health Care, Medical</td>
+      <td>Seed</td>
+      <td>₹15,000,000</td>
+      <td>Kolkata, West Bengal, India</td>
+      <td>Arogya MedTech is a Research & Development organization in Bio-Medical industry.</td>
+    </tr>
+    <tr>
+      <td>Propshop24</td>
+      <td>E-Commerce</td>
+      <td>Seed</td>
+      <td>500000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Propshop24, a one-stop shop for a handpicked selection of 'fun'tastic products from around the world.</td>
+    </tr>
+    <tr>
+      <td>myUpchar</td>
+      <td>Health Care, Hospital, Wellness</td>
+      <td>Series A</td>
+      <td>5000000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>To bring health issues to people in their language.</td>
+    </tr>
+    <tr>
+      <td>MissMalini Entertainment</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>₹104,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>MissMalini Entertainment is a multi-platform new media network dedicated to Entertaining, Connecting & Empowering young Indians.</td>
+    </tr>
+    <tr>
+      <td>Rooter</td>
+      <td>Sports</td>
+      <td>Seed</td>
+      <td>₹45,000,000</td>
+      <td>India, Asia</td>
+      <td>Rooter is a mobile-based platform</td>
+    </tr>
+    <tr>
+      <td>ZestMoney</td>
+      <td>Big Data, Consumer Lending, FinTech</td>
+      <td>Series A</td>
+      <td>13400000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Zest is India's first completely automated consumer digital lending platform.</td>
+    </tr>
+    <tr>
+      <td>alphaics Corporation</td>
+      <td>Cloud Computing, Computer, Semiconductor</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Advancing AI compute</td>
+    </tr>
+    <tr>
+      <td>MyDentistChoice</td>
+      <td>Health Care, Medical, Pharmaceutical</td>
+      <td>Seed</td>
+      <td>500000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>MyDentistChoice is a direct sales and distribution of dental equipment and accessories from top name manufacturers</td>
+    </tr>
+    <tr>
+      <td>Sattviko</td>
+      <td>Food Processing, Retail</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Sattviko fosters wellness and shares Indianness through the Sattvik way of cooking that is wholesome and tasty!</td>
+    </tr>
+    <tr>
+      <td>Sensibull</td>
+      <td>Trading Platform</td>
+      <td>Seed</td>
+      <td>₹25,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Investment Management Platform</td>
+    </tr>
+    <tr>
+      <td>Bombay Shaving Company</td>
+      <td>Consumer Goods, Lifestyle, Men's</td>
+      <td>Series A</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Bombay Shaving Company is a Men's grooming startup</td>
+    </tr>
+    <tr>
+      <td>MedCords</td>
+      <td>Wellness</td>
+      <td>Seed</td>
+      <td>₹26,400,000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Medcords is India’s first holistic healthcare ecosystem on a cloud platform that makes health management easier</td>
+    </tr>
+    <tr>
+      <td>University Living</td>
+      <td>Education</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>University Living is an online global student housing marketplace.</td>
+    </tr>
+    <tr>
+      <td>&ME</td>
+      <td>Food and Beverage, Food Processing, Nutrition</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Food and Beverage startup focussing on developing products using ayurveda with modern science for women empowerment and fitness.</td>
+    </tr>
+    <tr>
+      <td>Enakshi</td>
+      <td>Fashion</td>
+      <td>Seed</td>
+      <td>₹8,000,000</td>
+      <td>Ahmedabad, Gujarat, India</td>
+      <td>Enakshi is an online apparel brand for women.</td>
+    </tr>
+    <tr>
+      <td>Ultraviolette Automotive</td>
+      <td>Automotive, Electric Vehicle, Energy Storage</td>
+      <td>Series A</td>
+      <td>₹60,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Ultraviolette is a startup working on electric two-wheelers and energy infrastructure.</td>
+    </tr>
+    <tr>
+      <td>Inthree Access</td>
+      <td>Consulting, Retail, Social</td>
+      <td>Series A</td>
+      <td>4000000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Inthree Access is an impact venture that connects the most inaccessible rural markets with products that can transform lives in Rural India.</td>
+    </tr>
+    <tr>
+      <td>BUGWORKS Research India</td>
+      <td>Biotechnology, Life Science, Pharmaceutical, Product Research</td>
+      <td>Series A</td>
+      <td>9000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>BUGWORKS is a drug discovery company.</td>
+    </tr>
+    <tr>
+      <td>Guardian.in</td>
+      <td>Health Care</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>GNC is a leading global specialty retailer of health and wellness products that takes pride to be the world's largest company</td>
+    </tr>
+    <tr>
+      <td>PrestLoans</td>
+      <td>Credit, Financial Services, FinTech, Personal Finance</td>
+      <td>Seed</td>
+      <td>100000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>PrestLoans New age tech driven RBI regd NBFC helping businesses by providing easy, quick n hassle free loans.</td>
+    </tr>
+    <tr>
+      <td>Wimoxez</td>
+      <td>Internet</td>
+      <td>Seed</td>
+      <td>20000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>Data Intelligence Publishing Platform, We bring the best resources to learn valuable technologies which will shape tomorrow.</td>
+    </tr>
+    <tr>
+      <td>India Accelerator</td>
+      <td>Communities, Coworking, Incubators</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>India Accelerator runs mentorship-driven incubation and acceleration programs for start ups.</td>
+    </tr>
+    <tr>
+      <td>HappyEMI</td>
+      <td>Consumer, Financial Services, FinTech</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>HappyEMI is a point of sale digital lending platform that helps consumers finance their purchases in-store and online</td>
+    </tr>
+    <tr>
+      <td>Wishup</td>
+      <td>Consumer Applications, Information Services, Location Based Services, Virtual Assistant</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Azadpur, Delhi, India</td>
+      <td>Premium Personal Assistance service</td>
+    </tr>
+    <tr>
+      <td>Hansel.io</td>
+      <td>Mobile, Mobile Apps, Personalization, Test and Measurement, Web Apps</td>
+      <td>Series A</td>
+      <td>4000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Hansel, a mobile app management platform, provides the infrastructure that companies need, in order to personalize product experiences.</td>
+    </tr>
+    <tr>
+      <td>Propelld</td>
+      <td>Education, Financial Services, FinTech</td>
+      <td>Seed</td>
+      <td>250000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Propelld is a student education financing platform.</td>
+    </tr>
+    <tr>
+      <td>PivotRoots</td>
+      <td>Advertising, Consulting, Digital Marketing</td>
+      <td>Series A</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Digital Marketing powered by Data & Technology; fueled by Design thinking</td>
+    </tr>
+    <tr>
+      <td>ZiffyHomes</td>
+      <td>Marketplace, Real Estate, Rental Property</td>
+      <td>Seed</td>
+      <td>120000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>ZiffyHomes is a technology driven marketplace to find out home on rent.</td>
+    </tr>
+    <tr>
+      <td>Carmesi</td>
+      <td>Health Care</td>
+      <td>Seed</td>
+      <td>₹34,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Carmesi is a brand of high-end menstrual-hygiene products in India.</td>
+    </tr>
+    <tr>
+      <td>OckyPocky</td>
+      <td>E-Learning, Internet, Video Games</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Haryana, Haryana, India</td>
+      <td>OckyPocky is a interactive and personalised language learning app for preschool kids.</td>
+    </tr>
+    <tr>
+      <td>Racetrack</td>
+      <td>Artificial Intelligence, Cloud Computing, Video</td>
+      <td>Seed</td>
+      <td>₹342,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Racetrack is a sales and support-focused AI-driven platform designed for education, real estate, and e-commerce sectors.</td>
+    </tr>
+    <tr>
+      <td>WHR</td>
+      <td>Health Care, Information Technology</td>
+      <td>Seed</td>
+      <td>$143,145</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>WHR is to make affordable healthcare a reality for all. Our vision is to make healthcare services easier, better and more accessible.</td>
+    </tr>
+    <tr>
+      <td>Asteria Aerospace</td>
+      <td>Aerospace</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Asteria Aerospace is a robotics and artificial intelligence company.</td>
+    </tr>
+    <tr>
+      <td>FabAlley</td>
+      <td>E-Commerce, Fashion, Lifestyle</td>
+      <td>Series B</td>
+      <td>₹600,000,000</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>FabAlley is the ultimate Indian fashion destination for fashion-forward, indie-chic girls. Founded in 2012, Tanvi Malik and Shivani Poddar</td>
+    </tr>
+    <tr>
+      <td>Tranzmeo</td>
+      <td>Artificial Intelligence, Business Intelligence, Industrial Automation, Machine Learning</td>
+      <td>Pre-Seed</td>
+      <td>—</td>
+      <td>Cochin, Kerala, India</td>
+      <td>Tranzmeo Connect : is A Complete Comprehensive Anomaly forensic Solution with Actionable Insights.</td>
+    </tr>
+    <tr>
+      <td>SBI Life</td>
+      <td>Insurance</td>
+      <td>Private Equity</td>
+      <td>$742,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>SBI Life is one of the life insurance company that offers a range of life insurance plans and policies to protect you and your family.</td>
+    </tr>
+    <tr>
+      <td>Studds Accessories</td>
+      <td>E-Commerce</td>
+      <td>Private Equity</td>
+      <td>₹1,000,000,000</td>
+      <td>Faridabad, Haryana, India</td>
+      <td>Studds Accessories is a scooter accessories service provider in India</td>
+    </tr>
+    <tr>
+      <td>Design Cafe</td>
+      <td>Home Decor, Home Improvement, Home Renovation, Home Services, Interior Design, Smart Home</td>
+      <td>Series B</td>
+      <td>₹2,000,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Design + Execution Organization that delivers beautiful & innovative designs for Home Interiors, in any budget.</td>
+    </tr>
+    <tr>
+      <td>NoPaperForms Solutions Pvt. Ltd.</td>
+      <td>EdTech, Education, Information Services, SaaS</td>
+      <td>Series B</td>
+      <td>$3,980,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>NoPaperForms is a marketing automation, lead nurture and enrolment management platform for educational institutions</td>
+    </tr>
+    <tr>
+      <td>Rays Power Infra</td>
+      <td>Energy, Solar</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹2,000,000,000</td>
+      <td>Jaipur, Rajasthan, India</td>
+      <td>Rays Power Infra is a leading integrated Solar Power Company.</td>
+    </tr>
+    <tr>
+      <td>AuthMetrik</td>
+      <td>B2B, Biometrics, Cyber Security, Fraud Detection, SaaS, Security</td>
+      <td>Grant</td>
+      <td>$10,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>SaaS, B2B, Security, Stop account sharing, Fraud Detection</td>
+    </tr>
+    <tr>
+      <td>Khidki</td>
+      <td>Artificial Intelligence, Social</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Vernacular Social Network Focused on Town Level Content and Interactions</td>
+    </tr>
+    <tr>
+      <td>LetsTransport</td>
+      <td>Logistics, Transportation, Travel</td>
+      <td>Series B</td>
+      <td>₹1,000,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Lets transport is a logistics solution provider.</td>
+    </tr>
+    <tr>
+      <td>Next Digital Solutions</td>
+      <td>Digital Marketing, SEM, SEO, Web Development</td>
+      <td>Angel</td>
+      <td>₹100,000</td>
+      <td>Kota, Rajasthan, India</td>
+      <td>Next Digital Solutions is website design & Digital Marketing development company.</td>
+    </tr>
+    <tr>
+      <td>Portea Medical</td>
+      <td>Health Care, Hospital, Medical</td>
+      <td>Debt Financing</td>
+      <td>₹250,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Portea Medical is the largest and fastest growing provider of in-home medical care in India today with a 24-city network.</td>
+    </tr>
+    <tr>
+      <td>Aavas Financiers</td>
+      <td>Finance, Financial Services</td>
+      <td>Post-IPO Debt</td>
+      <td>₹2,000,000,000</td>
+      <td>Jaipur, Rajasthan, India</td>
+      <td>Aavas Financiers is engaged in the business of providing housing loans, primarily in the un-served, unreached and under-served market.</td>
+    </tr>
+    <tr>
+      <td>Swiggy</td>
+      <td>Food Delivery, Food Processing, Internet</td>
+      <td>Series H</td>
+      <td>$1,000,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Swiggy is a food ordering and delivery company that provides food service solutions for restaurants.</td>
+    </tr>
+    <tr>
+      <td>Milkbasket</td>
+      <td>E-Commerce, Food and Beverage, Internet</td>
+      <td>Series A</td>
+      <td>$7,000,000</td>
+      <td>Haryana, Haryana, India</td>
+      <td>Milkbasket delivers milk, bread, eggs, butter, juices and other daily need items, every morning, right at your doorstep, free of charge.</td>
+    </tr>
+    <tr>
+      <td>Nutrisattva (Proliva)</td>
+      <td>Fitness, Food and Beverage, Health Care, Nutrition</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Anand, Gujarat, India</td>
+      <td>Nutrisattva is a protein innovation compan</td>
+    </tr>
+    <tr>
+      <td>Toppr</td>
+      <td>EdTech, Education, Knowledge Management</td>
+      <td>Series C</td>
+      <td>$35,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Toppr.com is an online preparation platform for entrance exams in India.</td>
+    </tr>
+    <tr>
+      <td>Jagaran Microfin</td>
+      <td>—</td>
+      <td>Debt Financing</td>
+      <td>₹550,000,000</td>
+      <td>Kolkata, West Bengal, India</td>
+      <td>Jagaran Microfin is a Microfinance institution which achieves a healthy amalgamation of social and financial</td>
+    </tr>
+    <tr>
+      <td>Vivriti Capital</td>
+      <td>Financial Services</td>
+      <td>Venture - Series Unknown</td>
+      <td>$28,500,000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Vivriti Capital is an online platform for institutional debt in India.</td>
+    </tr>
+    <tr>
+      <td>Be U Salons</td>
+      <td>Apps, Beauty, Consumer, Retail</td>
+      <td>Seed</td>
+      <td>₹30,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Be U is India's first subscription based Salon Chain.</td>
+    </tr>
+    <tr>
+      <td>Impact Guru</td>
+      <td>Creative Agency, Crowdfunding, EdTech, Health Care, Internet, Medical, Non Profit, Personal Health</td>
+      <td>Series A</td>
+      <td>$2,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>We're a Harvard incubated crowdfunding platform for nonprofits, social enterprises, startups and individuals.</td>
+    </tr>
+    <tr>
+      <td>MobiKwik</td>
+      <td>Consumer Lending, Financial Services, FinTech, Insurance, Lending, Mobile Payments, Payments, Wealth Management</td>
+      <td>Series E</td>
+      <td>₹240,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>MobiKwik is a payments backed fintech platform in India. MobiKwik App offers instant loans & investment products to the 500M masses of India</td>
+    </tr>
+    <tr>
+      <td>Stones2Milestones</td>
+      <td>E-Learning, Education, Higher Education</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Stones2milestones is a Gurgaon Based Learning Company.</td>
+    </tr>
+    <tr>
+      <td>Generico</td>
+      <td>Health Care, Medical, Pharmaceutical</td>
+      <td>Series A</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Generico is the fastest growing specialized pharmacy retail chain of Generic medicines.</td>
+    </tr>
+    <tr>
+      <td>Adiuvo Diagnostics</td>
+      <td>Health Diagnostics</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Adiuvo Diagnostics is a medical diagnostic device company based in India.</td>
+    </tr>
+    <tr>
+      <td>DataTrained</td>
+      <td>EdTech, Education</td>
+      <td>Seed</td>
+      <td>₹120,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>DataTrained is a educational platform, which operates an ed-tech startup on data science</td>
+    </tr>
+    <tr>
+      <td>OneAssist</td>
+      <td>Financial Services, SaaS, Security</td>
+      <td>Debt Financing</td>
+      <td>$2,400,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>OneAssist is a protection & assistance services platform.</td>
+    </tr>
+    <tr>
+      <td>Satin Creditcare Network Limited (SCNL)</td>
+      <td>Banking, Finance, Financial Services, Non Profit</td>
+      <td>Post-IPO Debt</td>
+      <td>$30,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Satin is a non-banking finance company providing individual loans to urban shopkeepers.</td>
+    </tr>
+    <tr>
+      <td>APAC Financial Services</td>
+      <td>Finance, Financial Services</td>
+      <td>Private Equity</td>
+      <td>₹2,500,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>APAC Financial Services is a financial services platform.</td>
+    </tr>
+    <tr>
+      <td>Moglix</td>
+      <td>B2B, E-Commerce, Mobile</td>
+      <td>Series C</td>
+      <td>$23,000,000</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>Moglix is a supplier of industrial tools like hand tools, power tools, electrical, and safety equipment.</td>
+    </tr>
+    <tr>
+      <td>SEDEMAC Mechatronics</td>
+      <td>Automotive, Electric Vehicle, Renewable Energy</td>
+      <td>Venture - Series Unknown</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>SEDEMAC Mechatronics is technology company that distributes control-intensive products for automobiles.</td>
+    </tr>
+    <tr>
+      <td>MadGuy Labs</td>
+      <td>E-Learning</td>
+      <td>Venture - Series Unknown</td>
+      <td>$150,000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>MadGuy Labs is a Online Test-prep Platform.</td>
+    </tr>
+    <tr>
+      <td>Dee Dee Labs</td>
+      <td>Embedded Systems, Health Care, Medical, Product Research</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Dee Dee Labs is design and development lab with a primary focus on the development of next generation of bionic prostheses.</td>
+    </tr>
+    <tr>
+      <td>FLEECA</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Jaipur, Rajasthan, India</td>
+      <td>FLEECA is a Tyre Care Provider company.</td>
+    </tr>
+    <tr>
+      <td>Shop101</td>
+      <td>Apps, E-Commerce, Internet</td>
+      <td>Series B</td>
+      <td>$11,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>#1 Online Selling App. India’s leading social commerce platform. Setup free online store in 2 min. Sell own goods or resell Shop101 Supply.</td>
+    </tr>
+    <tr>
+      <td>FeedMyPockets</td>
+      <td>Advertising, Human Resources, Marketing</td>
+      <td>Seed</td>
+      <td>₹44,000,000</td>
+      <td>Bangalore City, Karnataka, India</td>
+      <td>On Demand Staffing Platform</td>
+    </tr>
+    <tr>
+      <td>Housejoy</td>
+      <td>Beauty, Fitness, Home Services, Internet</td>
+      <td>Series B</td>
+      <td>$3,240,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Housejoy is a web-based platform that allows individuals to browse and book service providers for their homes.</td>
+    </tr>
+    <tr>
+      <td>Ambee</td>
+      <td>Health Care, Medical Device, Public Safety</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Ambee is an Environment analytics startup.</td>
+    </tr>
+    <tr>
+      <td>FoodBuddy</td>
+      <td>Food Delivery, Online Portals, Restaurants</td>
+      <td>Seed</td>
+      <td>₹60,000,000</td>
+      <td>Belgaum, Karnataka, India</td>
+      <td>FoodBuddy is a online food delivery portal, providing boundary breaking delivery.</td>
+    </tr>
+    <tr>
+      <td>Ninjacart</td>
+      <td>AgTech, B2B, Supply Chain Management</td>
+      <td>Series B</td>
+      <td>₹2,500,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Ninjacart is a B2B agri-marketing platform that connects vegetables and fruits farmers directly with businesses.</td>
+    </tr>
+    <tr>
+      <td>Olly Smart Credit Card</td>
+      <td>Credit Cards, Finance, Mobile Apps, Mobile Payments, Payments</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Olly is a digital credit card for India's working masses and young people.</td>
+    </tr>
+    <tr>
+      <td>Zestl</td>
+      <td>Software</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>No-Code Workflow Automation. Build enterprise applications in days with AI, Cognitive Automation, Collaboration and more built in.</td>
+    </tr>
+    <tr>
+      <td>BYJU’S</td>
+      <td>EdTech, Education, Higher Education, Secondary Education</td>
+      <td>Private Equity</td>
+      <td>$540,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>BYJU’s is an edtech company that is reinventing how students learn through its learning app.</td>
+    </tr>
+    <tr>
+      <td>Wakefit</td>
+      <td>Manufacturing, Retail</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹650,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Wakefitkart is a mattress manufacturing company. We manufacture the best quality mattresses at affordable prices.</td>
+    </tr>
+    <tr>
+      <td>Hero Electric</td>
+      <td>Manufacturing</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹1,600,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Hero Electric, a 100% subsidiary of the Hero Group, is a pioneer in the Indian Electric Vehicle Industry.</td>
+    </tr>
+    <tr>
+      <td>Pentation Analytics</td>
+      <td>Information Services, Information Technology, InsurTech</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Pentation as an Insurtech enables insurers and intermediaries with our Insurance Analytics Suite- an Insurance specific AI/ML Software Suite</td>
+    </tr>
+    <tr>
+      <td>PerkFinance</td>
+      <td>Consumer Lending, FinTech</td>
+      <td>Seed</td>
+      <td>$900,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>PerkFinance partners with employers to provide affordable loans to their employees at no cost to the company</td>
+    </tr>
+    <tr>
+      <td>Roposo</td>
+      <td>Internet, Social Network, TV</td>
+      <td>Series C</td>
+      <td>$10,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Roposo - TV by the People is a unique social media platform where people express visually with homemade videos and photos.</td>
+    </tr>
+    <tr>
+      <td>Plum Goodness</td>
+      <td>Beauty, Health Care</td>
+      <td>Series A</td>
+      <td>—</td>
+      <td>Thane, Maharashtra, India</td>
+      <td>Plum Haircare Is Silicone-Free & Sulphate-Free. Designed For Damaged & Dandruff-Free Hair</td>
+    </tr>
+    <tr>
+      <td>Drstore</td>
+      <td>Hospital</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Drstore is a exclusive e- commerce platform.</td>
+    </tr>
+    <tr>
+      <td>Wow Venue</td>
+      <td>Events</td>
+      <td>Venture - Series Unknown</td>
+      <td>$1,500,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Wow Venue is an online platform.</td>
+    </tr>
+    <tr>
+      <td>Chizel</td>
+      <td>3D Printing, Manufacturing, Product Design</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Chizel is a worlds most advanced cloud platform for on-demand manufacturing in 3D Printing and CNC Machining</td>
+    </tr>
+    <tr>
+      <td>OTO Capital</td>
+      <td>Automotive</td>
+      <td>Seed</td>
+      <td>₹50,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>OTO Capital is a platform that allows you to own a car faster than ever.</td>
+    </tr>
+    <tr>
+      <td>Boodmo</td>
+      <td>Automotive, Retail</td>
+      <td>Seed</td>
+      <td>₹70,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>boodmo.com - large online marketplace for auto parts in India.</td>
+    </tr>
+    <tr>
+      <td>Khabri</td>
+      <td>Apps, Audio</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Haryana, Haryana, India</td>
+      <td>Khabri is a digital audio platform for content in vernacular.</td>
+    </tr>
+    <tr>
+      <td>MyNewCar.in</td>
+      <td>Automotive, E-Commerce</td>
+      <td>Venture - Series Unknown</td>
+      <td>$1,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>MyNewCar.in offers new cars at best price with great deals. Book a new car online or request a doorstep test drive</td>
+    </tr>
+    <tr>
+      <td>HalaPlay Technologies</td>
+      <td>Digital Entertainment, Fantasy Sports, Sports</td>
+      <td>Series A</td>
+      <td>$5,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>A daily fantasy sports platform.</td>
+    </tr>
+    <tr>
+      <td>PlanetSpark</td>
+      <td>E-Learning, EdTech, Education</td>
+      <td>Seed</td>
+      <td>₹16,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>PlanetSpark is an after-school Maths and English learning program for pre teen kids between Grades 2nd to 7th.</td>
+    </tr>
+    <tr>
+      <td>WheelsEMI</td>
+      <td>—</td>
+      <td>Series B</td>
+      <td>$14,000,000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>WheelsEMI is the brand name of NBFC, WheelsEMI Pvt. Ltd.</td>
+    </tr>
+    <tr>
+      <td>Forum for Innovation Incubation Research and Entrepreneurship</td>
+      <td>Funding Platform, Incubators, Non Profit</td>
+      <td>Grant</td>
+      <td>₹102,500,000</td>
+      <td>Margão, Goa, India</td>
+      <td>FiiRE, a technology business incubator helps the startup process to move from the garage to the lab.</td>
+    </tr>
+    <tr>
+      <td>OYO</td>
+      <td>Hospitality, Hotel, Leisure, Travel</td>
+      <td>Series E</td>
+      <td>$100,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>OYO is an Indian hospitality startup that operates a network of budget hotels.</td>
+    </tr>
+    <tr>
+      <td>Quikr</td>
+      <td>Classifieds, Internet, Marketplace, Rental Property</td>
+      <td>Debt Financing</td>
+      <td>₹550,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Quikr is a free classifieds and online marketplace that helps users sell, buy, rent, or discover anything across India.</td>
+    </tr>
+    <tr>
+      <td>Tabono</td>
+      <td>Sports</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Tabono is a one stop environment for all your fitness solution.</td>
+    </tr>
+    <tr>
+      <td>LearnApp</td>
+      <td>Banking, E-Learning, Trading Platform</td>
+      <td>Seed</td>
+      <td>₹20,000,000</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>Learnapp.co - Video courses & live classes in investing, trading, banking and finance.</td>
+    </tr>
+    <tr>
+      <td>Shopkirana</td>
+      <td>E-Commerce, Mobile, Retail</td>
+      <td>Venture - Series Unknown</td>
+      <td>$2,000,000</td>
+      <td>Indore, Madhya Pradesh, India</td>
+      <td>Shopkirana connects brands and traditional retailers with the help of technology and supply chain innovation.</td>
+    </tr>
+    <tr>
+      <td>Fric Bergen</td>
+      <td>—</td>
+      <td>Venture - Series Unknown</td>
+      <td>—</td>
+      <td>Alwar, Rajasthan, India</td>
+      <td>Fric Bergen is a leader in the specialty food industry.</td>
+    </tr>
+    <tr>
+      <td>Articbot</td>
+      <td>Artificial Intelligence, Information Technology</td>
+      <td>Grant</td>
+      <td>₹1,200,000</td>
+      <td>Kannur, Kerala, India</td>
+      <td>Articbot is a conversational AI platform for automated customer support and lead generation</td>
+    </tr>
+    <tr>
+      <td>BuildSupply</td>
+      <td>Enterprise Resource Planning (ERP), Information Services, Information Technology, Real Estate</td>
+      <td>Series A</td>
+      <td>₹250,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>India’s most advanced ERP system for the real estate</td>
+    </tr>
+    <tr>
+      <td>Fusion Microfinance</td>
+      <td>Banking, Finance, Financial Services</td>
+      <td>Series E</td>
+      <td>₹5,200,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Fusion Microfinance Pvt. Ltd. is an NBFC registered with RBI</td>
+    </tr>
+    <tr>
+      <td>Any time Doctor</td>
+      <td>Software</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Anytime Doctor is a Software company.</td>
+    </tr>
+    <tr>
+      <td>Go Payments</td>
+      <td>Information Services, Information Technology</td>
+      <td>Corporate Round</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Go Payments was founded with the mission of assisting consumers with performing a whole host of financial services at their doorstep.</td>
+    </tr>
+    <tr>
+      <td>Guiddoo World</td>
+      <td>Audio, Mobile, Tourism, Travel</td>
+      <td>Seed</td>
+      <td>$800,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>We build In-Destination Experiences!</td>
+    </tr>
+    <tr>
+      <td>ION Energy</td>
+      <td>Energy, Energy Storage, Infrastructure</td>
+      <td>Venture - Series Unknown</td>
+      <td>$1,041,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>A stealth startup building a layer of infrastructure for highly efficient energy storage systems.</td>
+    </tr>
+    <tr>
+      <td>UnoTag</td>
+      <td>Artificial Intelligence</td>
+      <td>Pre-Seed</td>
+      <td>$100,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>SaaS to verify counterfeit</td>
+    </tr>
+    <tr>
+      <td>CivilCops</td>
+      <td>Government, Information Technology, Software</td>
+      <td>Pre-Seed</td>
+      <td>$100,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Gov-Tech</td>
+    </tr>
+    <tr>
+      <td>Rockmetric</td>
+      <td>Information Technology</td>
+      <td>Grant</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Smarter analytics to understand how each customer uses your product. Drive growth in conversion, retention and engagement.</td>
+    </tr>
+    <tr>
+      <td>Classworks India</td>
+      <td>Education, Information Technology, Internet, Mobile, Software</td>
+      <td>Undisclosed</td>
+      <td>₹100,000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Saas, Web App, Mobile App, School Education</td>
+    </tr>
+    <tr>
+      <td>Snapmint</td>
+      <td>Consumer Lending, Financial Services, Lending, Personal Finance</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Snapmint facilitates simplified, fairly-priced and hassle-free EMI options without a Credit Card.</td>
+    </tr>
+    <tr>
+      <td>artbandhu</td>
+      <td>Digital Media, Internet, Media and Entertainment, Online Portals, Social Media</td>
+      <td>Pre-Seed</td>
+      <td>$15,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Ai platform for Art and Creative Community</td>
+    </tr>
+    <tr>
+      <td>Survaider</td>
+      <td>Business Intelligence, Customer Service, Market Research, SaaS</td>
+      <td>Seed</td>
+      <td>500000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Stethoscope for customer feedback !</td>
+    </tr>
+    <tr>
+      <td>Credy</td>
+      <td>Credit, Financial Services, FinTech, Lending</td>
+      <td>Seed</td>
+      <td>1400000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Credy is a fintech platform that connects borrowers seeking capital with lenders seeking market beating returns.</td>
+    </tr>
+    <tr>
+      <td>iChamp</td>
+      <td>E-Learning</td>
+      <td>Seed</td>
+      <td>5000000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>iChamp is an e education innovation product from RNM E-Services Pvt Ltd.</td>
+    </tr>
+    <tr>
+      <td>Qandle</td>
+      <td>Software</td>
+      <td>Seed</td>
+      <td>1200000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>A cloud-based HR management and employee engagement platform.</td>
+    </tr>
+    <tr>
+      <td>Avishkaar Box</td>
+      <td>Children, Education, Parenting</td>
+      <td>Seed</td>
+      <td>₹50,000,000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>Avishkaar Box is just not another box full of material rather it is a well researched, thought through solution</td>
+    </tr>
+    <tr>
+      <td>Gegadyne Energy</td>
+      <td>Automotive, Battery, Energy, Energy Storage</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>A Mumbai-based startup Electric Vehicle (EV) & Energy Storage company.</td>
+    </tr>
+    <tr>
+      <td>HyperXchange</td>
+      <td>E-Commerce, Mobile, Sharing Economy</td>
+      <td>Series A</td>
+      <td>1000000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>hyperXchange is India's fastest growing O2O marketplace for premium refurb gadgets</td>
+    </tr>
+    <tr>
+      <td>Deftouch</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Deftouch is a mobile game development company that currently focuses on winning the Cricket gaming market with a social multiplayer game.</td>
+    </tr>
+    <tr>
+      <td>Doodhwala</td>
+      <td>Food Delivery, Organic, Organic Food</td>
+      <td>Seed</td>
+      <td>2200000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Doodhwala is an online milk delivery startup that offers over 70 varieties of milk along with a plan based on clients' requirement.</td>
+    </tr>
+    <tr>
+      <td>DronaHQ</td>
+      <td>Mobile</td>
+      <td>Angel</td>
+      <td>500000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>DronaHQ is an enterprise mobile engagement platform.</td>
+    </tr>
+    <tr>
+      <td>FastFox</td>
+      <td>Rental</td>
+      <td>Series A</td>
+      <td>₹100,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>FastFox: Market Network for Home Rentals (India)</td>
+    </tr>
+    <tr>
+      <td>BuyForexOnline</td>
+      <td>Travel</td>
+      <td>https://docs.google.com/spreadsheets/d/1x9ziNeaz6auNChIHnMI8U6kS7knTr3byy_YBGfQaoUA/edit#gid=1861303593</td>
+      <td>2000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>BuyForexOnline.com is India's first completely online provider for buying Foreign Exchange.</td>
+    </tr>
+    <tr>
+      <td>Colive.in</td>
+      <td>Consumer</td>
+      <td>Seed</td>
+      <td>1800000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>A technology powered network of Branded Serviced Homes conveniently located near educational institutions & workplaces.</td>
+    </tr>
+    <tr>
+      <td>Agricxlab Private Limited</td>
+      <td>B2B, Farming, Marketplace</td>
+      <td>Seed</td>
+      <td>500000</td>
+      <td>Thane, Maharashtra, India</td>
+      <td>Online marketplace where farmers and traders can sell their produce to B2B buyers</td>
+    </tr>
+    <tr>
+      <td>Corefactors</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Corefactors is a leading campaign management, business communication and analytics company.</td>
+    </tr>
+    <tr>
+      <td>Fincash.com</td>
+      <td>Wealth Management</td>
+      <td>Seed</td>
+      <td>150000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>A startup in the personal finance space in India .</td>
+    </tr>
+    <tr>
+      <td>Pandorum Technologies</td>
+      <td>Biotechnology</td>
+      <td>Series A</td>
+      <td>3600000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Bengaluru based biotech startup.</td>
+    </tr>
+    <tr>
+      <td>Shirsa Labs</td>
+      <td>Education, Gaming, Training</td>
+      <td>Seed</td>
+      <td>500000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Shirsa Labs is a cognitive skill assessment and training portal that provides children with fun educational games.</td>
+    </tr>
+    <tr>
+      <td>PetSutra</td>
+      <td>Veterinary</td>
+      <td>Seed</td>
+      <td>₹9,500,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Gurugram-based Online petcare platform.</td>
+    </tr>
+    <tr>
+      <td>Awaaz De</td>
+      <td>Internet, Mobile, Social Entrepreneurship, Telecommunications, Wireless</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Ahmedabad, Gujarat, India</td>
+      <td>Awwaz.De develops inclusive mobile solutions that enable organizations to achieve last-mile connectivity for social impact.</td>
+    </tr>
+    <tr>
+      <td>PinkBlue</td>
+      <td>Health Care, Hospital, Supply Chain Management</td>
+      <td>Seed</td>
+      <td>300000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>PinkBlue.in - Super-efficient supply-chain for clinical supplies</td>
+    </tr>
+    <tr>
+      <td>Eduvanz</td>
+      <td>Finance, Financial Services</td>
+      <td>Angel</td>
+      <td>500000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Eduvanz is new, innovative finance company, which is completely revolutionizing the student loan market.</td>
+    </tr>
+    <tr>
+      <td>Rupeek</td>
+      <td>Financial Services, Lending</td>
+      <td>Series A</td>
+      <td>6830000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Rupeek is an asset backed online lending platform currently operating in the space of Gold loans.</td>
+    </tr>
+    <tr>
+      <td>Backpacker Panda Holidays Private Limited</td>
+      <td>Tourism, Travel</td>
+      <td>Series A</td>
+      <td>1400000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Backpacker Panda is creating an ecosystem for youth accommodation and travel.</td>
+    </tr>
+    <tr>
+      <td>Shape (School Health and Physical Education)</td>
+      <td>Education</td>
+      <td>Seed</td>
+      <td>200000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Physical education start up</td>
+    </tr>
+    <tr>
+      <td>Placio</td>
+      <td>Hospitality, Real Estate</td>
+      <td>Seed</td>
+      <td>2000000</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>Placio is a student housing and a complete broker-free platform.</td>
+    </tr>
+    <tr>
+      <td>Aviom India Housing Finance</td>
+      <td>Finance</td>
+      <td>Series A</td>
+      <td>₹150,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Delhi based housing finance company.</td>
+    </tr>
+    <tr>
+      <td>GenRobotic</td>
+      <td>Market Research</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Trivandrum, Kerala, India</td>
+      <td>A Robotic Company.</td>
+    </tr>
+    <tr>
+      <td>HeyHolidays</td>
+      <td>Tourism, Travel</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>HeyHolidays, a global player in online vacation rentals.</td>
+    </tr>
+    <tr>
+      <td>Pratilipi</td>
+      <td>Digital Media, EBooks, Publishing, Reading Apps</td>
+      <td>Series A</td>
+      <td>4300000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Amazon's Kindle Direct Publishing for Indian Languages</td>
+    </tr>
+    <tr>
+      <td>SectorQube</td>
+      <td>Consumer Electronics, Embedded Systems, Hardware, Smart Building, Software</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Ernakulam, Kerala, India</td>
+      <td>SectorQube develops smart kitchen devices that make food automatically.</td>
+    </tr>
+    <tr>
+      <td>Food Memories</td>
+      <td>Food and Beverage, Food Processing</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Ahmedabad, Gujarat, India</td>
+      <td>Iconic Indian Delicacies from the most renowned vendors of India Delivered Globally.</td>
+    </tr>
+    <tr>
+      <td>ZAMROO</td>
+      <td>Internet, Marketplace, Shopping</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>India, Asia</td>
+      <td>Zamroo is a growing mobile marketplace that allows users to buy and sell locally.</td>
+    </tr>
+    <tr>
+      <td>Silversparro Technologies Pvt. Ltd</td>
+      <td>Analytics, Computer Vision, Enterprise Software, Machine Learning, Natural Language Processing, Speech Recognition</td>
+      <td>Seed</td>
+      <td>300000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Silversparro is a deep learning technology solution provider.</td>
+    </tr>
+    <tr>
+      <td>Creator’s Gurukul</td>
+      <td>Facilities Support Services</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>A coworking space provider.</td>
+    </tr>
+    <tr>
+      <td>Emflux Motors</td>
+      <td>Automotive, Electric Vehicle, Energy</td>
+      <td>Seed</td>
+      <td>364846</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Emflux Motors is committed to bring clean and sustainable energy into a state of universal acceptance through technological innovation.</td>
+    </tr>
+    <tr>
+      <td>Tricog Health Services Pvt Ltd</td>
+      <td>Health Care, Health Diagnostics, Predictive Analytics</td>
+      <td>Series A</td>
+      <td>4000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Predictive Healthcare Analytics Company</td>
+    </tr>
+    <tr>
+      <td>Scapic</td>
+      <td>Cloud Computing, Computer, SaaS, Software</td>
+      <td>Seed</td>
+      <td>500000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Virtual/Augmented Reality Start Up .</td>
+    </tr>
+    <tr>
+      <td>6Degree</td>
+      <td>Fashion, Lifestyle, Retail</td>
+      <td>Seed</td>
+      <td>400000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>A fashion enterprise that provides a launchpad to fashion talent and brands using a tech enabled platform</td>
+    </tr>
+    <tr>
+      <td>Chrysalis (EZ Vidya)</td>
+      <td>Education</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Chrysalis (EZ Vidya) is India’s leading educational research and innovation organization</td>
+    </tr>
+    <tr>
+      <td>Ekincare</td>
+      <td>Medical</td>
+      <td>Series A</td>
+      <td>1500000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>EKincare empowers you to take charge of your health by enabling you to monitor critical medical info and make it available anywhere.</td>
+    </tr>
+    <tr>
+      <td>Streo</td>
+      <td>Music Streaming</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Live stream music from nightclubs, bars & festivals!</td>
+    </tr>
+    <tr>
+      <td>Groww</td>
+      <td>Finance, Impact Investing, Internet</td>
+      <td>Seed</td>
+      <td>120000</td>
+      <td>Kormangala, Karnataka, India</td>
+      <td>Groww offers a new way of investing money.</td>
+    </tr>
+    <tr>
+      <td>Cell Propulsion</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>₹7,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Cell Propulsion is an electric mobility startup that designs autonomous electric vehicles.</td>
+    </tr>
+    <tr>
+      <td>Chezuba</td>
+      <td>Internet, Social Entrepreneurship</td>
+      <td>Angel</td>
+      <td>₹1,400,000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>Chezuba is a web-based platform enabling skilled professionals to volunteer online with Non-profits worldwide</td>
+    </tr>
+    <tr>
+      <td>Ontrack Technologies Pvt. Ltd</td>
+      <td>Retail</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Ontrack provides affordable independent transport to those dependent on cabs and autos for commute by renting bikes on a monthly basis.</td>
+    </tr>
+    <tr>
+      <td>Wealthtrust</td>
+      <td>Finance, Impact Investing, Mobile Apps</td>
+      <td>Seed</td>
+      <td>500000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Wealthtrust offers a wealth manager application that enables its users to invest and manage their investments online.</td>
+    </tr>
+    <tr>
+      <td>Faclon Labs</td>
+      <td>Cloud Computing, Computer, Software</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Faclon is an IoT and data analytics based tech startup building products to make cities and villages smart.</td>
+    </tr>
+    <tr>
+      <td>Awign Enterprises</td>
+      <td>Business Development, Market Research, Outsourcing</td>
+      <td>Seed</td>
+      <td>₹50,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Operations and manpower outsourcing startup</td>
+    </tr>
+    <tr>
+      <td>CollPoll</td>
+      <td>Education</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>World-class Enterprise System for Education.</td>
+    </tr>
+    <tr>
+      <td>Zyla Health</td>
+      <td>Health Care, Hospitality</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Zyla is transforming the way healthcare is delivered in India with specific focus on high-risk chronic patients.</td>
+    </tr>
+    <tr>
+      <td>Hubhopper</td>
+      <td>Internet, Social News, Sports</td>
+      <td>Series A</td>
+      <td>500000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>Get your daily dose of interest as summaries from news and magazine stories .</td>
+    </tr>
+    <tr>
+      <td>Rubix108 Technologies</td>
+      <td>Information Technology</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Rubix Total App makes it effortless for Institutes to send home important information and updates about the day’s learning experiences.</td>
+    </tr>
+    <tr>
+      <td>Workflexi</td>
+      <td>Human Resources</td>
+      <td>Seed</td>
+      <td>₹10,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Be Smart, Work on Contract,Be Smart, Hire on Contract</td>
+    </tr>
+    <tr>
+      <td>Streak</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>₹22,500,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Algorithmic trading platform.</td>
+    </tr>
+    <tr>
+      <td>Kuants</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>₹5,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Algorithmic trading platform.</td>
+    </tr>
+    <tr>
+      <td>NiYO Solutions</td>
+      <td>Finance, Financial Services, FinTech</td>
+      <td>Series A</td>
+      <td>13200000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>NiYO is a fintech company that helps salaried employees access company benefits and other financial services.</td>
+    </tr>
+    <tr>
+      <td>Hippo Video</td>
+      <td>Customer Service, Software, Video, Video Streaming</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>A video recording and sharing software.</td>
+    </tr>
+    <tr>
+      <td>Satvacart</td>
+      <td>E-Commerce, Food Processing</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Satvacart is a Gurgaon’s largest online supermarket</td>
+    </tr>
+    <tr>
+      <td>Daaki</td>
+      <td>Health Care</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Sports Nutrition startup</td>
+    </tr>
+    <tr>
+      <td>Simulanis</td>
+      <td>Training</td>
+      <td>Seed</td>
+      <td>500000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>A Delhi-based Augmented Reality and Virtual Reality technology development company.</td>
+    </tr>
+    <tr>
+      <td>MY CHIRAAG CAB</td>
+      <td>Travel</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Jaipur, Rajasthan, India</td>
+      <td>MY CHIRAAG CAB SERVICES PVT LTD</td>
+    </tr>
+    <tr>
+      <td>WOTU</td>
+      <td>Food and Beverage</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>It operates a business-to-business e-commerce portal for food and beverages.</td>
+    </tr>
+    <tr>
+      <td>Flathalt</td>
+      <td>—</td>
+      <td>Angel</td>
+      <td>50000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>FInd your Customized Home here.</td>
+    </tr>
+    <tr>
+      <td>True Elements</td>
+      <td>Dietary Supplements, Food and Beverage, Health Care, Organic Food, Snack Food</td>
+      <td>Seed</td>
+      <td>₹50,000,000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>True elements offers a range of high-quality snacks and supplements that are inspired by natural foods consumed by our ancestors.</td>
+    </tr>
+    <tr>
+      <td>Trendlyne Technologies</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>200000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Trendlyne Technologies is a stock market analytics platform and marketplace for retail investors.</td>
+    </tr>
+    <tr>
+      <td>Planys Technologies</td>
+      <td>Manufacturing, Oil and Gas, Robotics</td>
+      <td>Series A</td>
+      <td>₹140,200,000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Planys Technologies is India’s first and only manufacturer of compact ROVs providing underwater robotic inspection and survey solutions.</td>
+    </tr>
+    <tr>
+      <td>HealthPlix</td>
+      <td>Fitness, Health Care, Wellness</td>
+      <td>Series A</td>
+      <td>3000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>HealthPlix is a healthtech startup</td>
+    </tr>
+    <tr>
+      <td>dishq</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>400000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>dishq leverages food science and machine learning (AI) to understand and predict people's tastes.</td>
+    </tr>
+    <tr>
+      <td>Entropik Technology</td>
+      <td>Artificial Intelligence, Computer, Machine Learning</td>
+      <td>Seed</td>
+      <td>1100000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>The boundaries between Human and Machines are shrinking fast.</td>
+    </tr>
+    <tr>
+      <td>myHQ</td>
+      <td>Collaboration, Communities, Coworking, Sharing Economy</td>
+      <td>Series A</td>
+      <td>500000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>myHQ turns your everyday coffee space into a perfect work zone. Get an amazing work environment without paying any rent.</td>
+    </tr>
+    <tr>
+      <td>Trell</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>1250000</td>
+      <td>Bangalore City, Karnataka, India</td>
+      <td>Trell is a location based network which helps you in exploring amazing experiences and annotating places around you.</td>
+    </tr>
+    <tr>
+      <td>Kidovators (by GyanLab)</td>
+      <td>Big Data, EdTech, Machine Learning</td>
+      <td>Seed</td>
+      <td>180000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Building future human capital through 21st Century Skills programs for K-12</td>
+    </tr>
+    <tr>
+      <td>Log 9 Materials</td>
+      <td>Nanotechnology</td>
+      <td>Seed</td>
+      <td>₹30,000,000</td>
+      <td>Uttar Pradesh, India, Asia</td>
+      <td>Log 9 Materials is a nano-materials manufacturing and RnD startup</td>
+    </tr>
+    <tr>
+      <td>VTION</td>
+      <td>Analytics, Audio, Digital Media, Innovation Management, Internet Radio, Media and Entertainment</td>
+      <td>Seed</td>
+      <td>₹19,200,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>VTION is a media technology innovation firm aiming to solve key problems in the media based ecosystem.</td>
+    </tr>
+    <tr>
+      <td>HousingMan.com</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>₹103,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>New Apartments, Flats for Sale in Bangalore</td>
+    </tr>
+    <tr>
+      <td>Steradian Semiconductors</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>It is a fabless semiconductor company focused on CMOS millimeter wave products for Radar.</td>
+    </tr>
+    <tr>
+      <td>RupeeCircle</td>
+      <td>Financial Services, Lending, Peer to Peer</td>
+      <td>Seed</td>
+      <td>₹40,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>RupeeCircle is a new age finance company.</td>
+    </tr>
+    <tr>
+      <td>Wooden Street</td>
+      <td>E-Commerce, Furniture, Home Decor, Interior Design, Internet</td>
+      <td>Series A</td>
+      <td>1000000</td>
+      <td>Jaipur, Rajasthan, India</td>
+      <td>Woodenstreet.com ensures to fulfill customer’s unique furniture requirements by crafting one-of-a-kind furniture pieces.</td>
+    </tr>
+    <tr>
+      <td>The Ken</td>
+      <td>Digital Media</td>
+      <td>Series A</td>
+      <td>1500000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>The Ken is India’s first subscriptions-only business news site</td>
+    </tr>
+    <tr>
+      <td>SaffronStays</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>2000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>SaffronStays connects travellers to India's Incredible hosts.</td>
+    </tr>
+    <tr>
+      <td>Vebbler</td>
+      <td>File Sharing, Personalization, Social Media</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>A personal network for close people</td>
+    </tr>
+    <tr>
+      <td>Foyr</td>
+      <td>Home Decor, Interior Design</td>
+      <td>Series A</td>
+      <td>4200000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Foyr.com is India's first online, automated interior designer</td>
+    </tr>
+    <tr>
+      <td>MEngage</td>
+      <td>Health Care, Medical Device, Mobile Apps</td>
+      <td>Seed</td>
+      <td>175000</td>
+      <td>Jaipur, Rajasthan, India</td>
+      <td>MEngage is a mass consumer engagement application for doctors on both android and IOS platforms.</td>
+    </tr>
+    <tr>
+      <td>Inner Being Wellness</td>
+      <td>—</td>
+      <td>Angel</td>
+      <td>₹35,000,000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>Inner Being Wellness manufactures beauty, wellness, and nutrition products.</td>
+    </tr>
+    <tr>
+      <td>Kobster</td>
+      <td>E-Commerce, Facilities Support Services, Procurement, Supply Chain Management</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Kobster is a pioneer of B2B eProcurement and an eMarketplace providing Corporates an end-to-end solution for their procure-to-pay cycle.</td>
+    </tr>
+    <tr>
+      <td>Wishberry</td>
+      <td>Crowdfunding, Finance, Financial Services</td>
+      <td>Series A</td>
+      <td>₹100,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Wishberry is a rewards-based crowdfunding platform that enables users to raise funds for their creative and innovative ideas.</td>
+    </tr>
+    <tr>
+      <td>McXtra</td>
+      <td>Finance, Financial Services, Insurance</td>
+      <td>Seed</td>
+      <td>1300000</td>
+      <td>Andheri, Maharashtra, India</td>
+      <td>McXtra is a digital insurance broking startup.</td>
+    </tr>
+    <tr>
+      <td>Magic Crate</td>
+      <td>Children, Education, Online Portals</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Magic Crate is a theme based stimulating, fun and learning activity box for 4-8 year olds that is mailed to your doorstep every month.</td>
+    </tr>
+    <tr>
+      <td>SmartVizX</td>
+      <td>Software, Virtual Reality</td>
+      <td>Seed</td>
+      <td>1450000</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>It is a Virtual Reality Solutions StartUp</td>
+    </tr>
+    <tr>
+      <td>MySEODoc</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Delhi, Delhi, India</td>
+      <td>SEO, PPC, Search Engine Marketing, Social Media Optimization, Content Marketing, Brand Reputation Management</td>
+    </tr>
+    <tr>
+      <td>ENLYFT DIGITAL SOLUTIONS PRIVATE LIMITED</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>₹200,000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Digital Marketing Agency</td>
+    </tr>
+    <tr>
+      <td>Scale Labs</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>Scale Labs is a cross border e-commerce solutions provider that drives global trade for brands.</td>
+    </tr>
+    <tr>
+      <td>HungerBox</td>
+      <td>B2B, Food and Beverage, Food Delivery</td>
+      <td>Series A</td>
+      <td>4500000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>HungerBox is a full stack B2B F&B technology company delivering food solutions for the corporates in India.</td>
+    </tr>
+    <tr>
+      <td>Biryani By Kilo</td>
+      <td>Catering, Food and Beverage, Food Delivery, Food Processing</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>BBK delivers both authentic taste of Hyderabadi and Lucknowi Biryani prepared in individual earthen Handis with the freshest ingredients.</td>
+    </tr>
+    <tr>
+      <td>Wholesome Habits (EAT Anytime)</td>
+      <td>Food and Beverage, Snack Food</td>
+      <td>Seed</td>
+      <td>500000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Wholesome Habits (EAT Anytime) is a healthy snacks Company.</td>
+    </tr>
+    <tr>
+      <td>GoBumpr</td>
+      <td>Automotive, E-Commerce, Mobile</td>
+      <td>Seed</td>
+      <td>600000</td>
+      <td>Mylapore, Tamil Nadu, India</td>
+      <td>Car Service and Bike Service Mobile App</td>
+    </tr>
+    <tr>
+      <td>Fixpocket</td>
+      <td>Computer, Digital Marketing, Facilities Support Services, Graphic Design, Internet, Mobile Apps, Social Media Marketing, Web Development</td>
+      <td>Seed</td>
+      <td>250000</td>
+      <td>Ahmedabad, Gujarat, India</td>
+      <td>Fixpocket is a internet-based startup.</td>
+    </tr>
+    <tr>
+      <td>edureka!</td>
+      <td>Android, Big Data, Blockchain, Cloud Computing, EdTech, Education, Information Technology, iOS, Training, Web Development</td>
+      <td>Series A</td>
+      <td>2000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Edureka is the fastest growing online learning platform that offers live, instructor-led courses for professionals from various industries.</td>
+    </tr>
+    <tr>
+      <td>Hashtag Loyalty Private Limited</td>
+      <td>Analytics, CRM, Loyalty Programs, Machine Learning, Marketing Automation, Retail Technology, SaaS, Small and Medium Businesses</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Hashtag Loyalty is a customer engagement and marketing automation tool for local businesses.</td>
+    </tr>
+    <tr>
+      <td>Wow Express</td>
+      <td>Delivery, Information Technology, Mobile Apps</td>
+      <td>Series A</td>
+      <td>4500000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>WOW, as customers react to his studiously taught, trained, polite and courteous nature.</td>
+    </tr>
+    <tr>
+      <td>ZunRoof</td>
+      <td>Environmental Consulting, Renewable Energy</td>
+      <td>Angel</td>
+      <td>₹16,600,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>ZunRoof is a rooftop focused solar startup.</td>
+    </tr>
+    <tr>
+      <td>Eggoz</td>
+      <td>Food and Beverage, Food Processing</td>
+      <td>Angel</td>
+      <td>₹12,000,000</td>
+      <td>Indore, Madhya Pradesh, India</td>
+      <td>Eggoz is a full-stack layer poultry business operator & service provider .</td>
+    </tr>
+    <tr>
+      <td>Sqrrl Fintech</td>
+      <td>Big Data, Business Intelligence, Financial Services, FinTech, Personal Finance</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Personal Finance</td>
+    </tr>
+    <tr>
+      <td>GalaxyCard</td>
+      <td>Finance, Financial Services, FinTech</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>GalaxyCard is a mobile based Instant credit card.</td>
+    </tr>
+    <tr>
+      <td>IndiQube</td>
+      <td>Commercial Real Estate, Coworking, Office Administration, Real Estate</td>
+      <td>Series A</td>
+      <td>15000000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>IndiQube is a provider of co-working spaces based in Bengaluru.</td>
+    </tr>
+    <tr>
+      <td>EGK Foods</td>
+      <td>Food and Beverage, Food Processing, Organic Food, Snack Food</td>
+      <td>Seed</td>
+      <td>₹20,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>A food processing enterprise registered with StartUp India .</td>
+    </tr>
+    <tr>
+      <td>NirogStreet</td>
+      <td>Apps, Health Care, Internet, Mobile Apps, Personal Health</td>
+      <td>Seed</td>
+      <td>300000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>NirogStreet is an Ayurvedic doctor discovery and appointment booking platform where patients can easily find doctors and fix consultation.</td>
+    </tr>
+    <tr>
+      <td>Pixr8</td>
+      <td>Digital Media, Incubators, Social Entrepreneurship</td>
+      <td>Seed</td>
+      <td>50000</td>
+      <td>Ghaziabad, Uttar Pradesh, India</td>
+      <td>Pixr8 is a global media platform dedicated to Start-ups and business organisations for promoting entrepreneurship work.</td>
+    </tr>
+    <tr>
+      <td>Nivesh.com</td>
+      <td>Finance, Financial Services, Marketing</td>
+      <td>Seed</td>
+      <td>₹30,000,000</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>Nivesh.com is a mass market mutual funds investment platform.</td>
+    </tr>
+    <tr>
+      <td>Theranosis Life Sciences</td>
+      <td>Biotechnology, Health Care, Life Science, Medical Device</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>A fully functioning cell culture facility and molecular biology setup.</td>
+    </tr>
+    <tr>
+      <td>Poshmiles Online Solutions Private Limited</td>
+      <td>Travel</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Poshmiles aims to help point travellers to long weekend trips at popular and undiscovered destinations based on budget & interest.</td>
+    </tr>
+    <tr>
+      <td>Reculta</td>
+      <td>Education, Human Resources</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>A campus recruitment solution provider.</td>
+    </tr>
+    <tr>
+      <td>Orbo.ai</td>
+      <td>Internet</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Orbo is a computer vision and deep facial technology company.</td>
+    </tr>
+    <tr>
+      <td>Inntot Technologies</td>
+      <td>Consumer Electronics</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Kochi, Kerala, India</td>
+      <td>Inntot Technologies, is a technology driven company.</td>
+    </tr>
+    <tr>
+      <td>Zoctr Health</td>
+      <td>Apps, Health Care, Hospital, Mobile Apps</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Powai, Assam, India</td>
+      <td>Zoctr Health Network is a first-of-its kind pan-India Home & Telehealth Company</td>
+    </tr>
+    <tr>
+      <td>Hey Deedee</td>
+      <td>Delivery Service, Logistics, Service Industry</td>
+      <td>Seed</td>
+      <td>₹33,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Hey Deedee is a Mumbai-based company that provides solutions to parcel delivery problems.</td>
+    </tr>
+    <tr>
+      <td>DigiConnectt Technologys</td>
+      <td>Information Services, Information Technology</td>
+      <td>Seed</td>
+      <td>125000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>A technology company focused on introducing products that will accelerate and enhance sales productivity and effectiveness .</td>
+    </tr>
+    <tr>
+      <td>Locus.sh</td>
+      <td>Big Data, Data Visualization, Logistics, Software</td>
+      <td>Series A</td>
+      <td>4000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Locus is an intelligent logistics automation platform.</td>
+    </tr>
+    <tr>
+      <td>Sports Flashes Pvt. Ltd</td>
+      <td>Basketball, Cricket, Cycling, eSports, Fitness, Golf, Health Care, Hockey, Sports, Swimming, Table Tennis, Volley Ball</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Sports Flashes operates a sports content app that provides sports news, live scores, fantasy gaming, expert views, trivia, and more.</td>
+    </tr>
+    <tr>
+      <td>Inc42</td>
+      <td>Media and Entertainment, News, Publishing</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Inc42 is one of the leading tech media publications of India.</td>
+    </tr>
+    <tr>
+      <td>Picxy</td>
+      <td>Internet</td>
+      <td>Seed</td>
+      <td>130000</td>
+      <td>Guntur, Andhra Pradesh, India</td>
+      <td>A stock photo startup based in Amravati, Andhra Pradesh.</td>
+    </tr>
+    <tr>
+      <td>Huddle</td>
+      <td>Consulting</td>
+      <td>Seed</td>
+      <td>300000</td>
+      <td>Haryana, Haryana, India</td>
+      <td>A coworking incubator Company.</td>
+    </tr>
+    <tr>
+      <td>Benepik</td>
+      <td>Human Resources</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>HR Technology start-up.</td>
+    </tr>
+    <tr>
+      <td>Cash Suvidha</td>
+      <td>Finance</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Cash Suvidha is an Digital Lending Platform that provide working capital finance to SMEs and MSMEs in India.</td>
+    </tr>
+    <tr>
+      <td>Smartcoin</td>
+      <td>Big Data, Financial Services, Machine Learning, Predictive Analytics</td>
+      <td>Seed</td>
+      <td>2000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Providing financial access to the millions of mobile users in India using alternative credit assessment</td>
+    </tr>
+    <tr>
+      <td>Carmel Organics</td>
+      <td>Agriculture, AgTech, Manufacturing</td>
+      <td>Series A</td>
+      <td>—</td>
+      <td>Indore, Madhya Pradesh, India</td>
+      <td>Carmel Organics is an India-based herb company engaged in sourcing, processing, and distributing herbal tea ingredients.</td>
+    </tr>
+    <tr>
+      <td>Roadcast</td>
+      <td>—</td>
+      <td>Angel</td>
+      <td>250000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Transforming the way businesses deliver. Work-force & fleet mobility tools.</td>
+    </tr>
+    <tr>
+      <td>Printline Media(ThePrint)</td>
+      <td>Digital Media, News, Publishing</td>
+      <td>Seed</td>
+      <td>₹34,900,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>A digital news platform.</td>
+    </tr>
+    <tr>
+      <td>Creditas Solutions</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Creditas was set-up in 2015 with an aim to help Financial Institutions find better ways to reach and interact with their customers.</td>
+    </tr>
+    <tr>
+      <td>UrbanPiper</td>
+      <td>Software</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>UrbanPiper offers restaurants and chains with a suite of products to manage and analyze their online presence.</td>
+    </tr>
+    <tr>
+      <td>Doxper</td>
+      <td>Health Care, Hospital</td>
+      <td>Seed</td>
+      <td>₹72,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Doxper is Health tech startup which has created a digital pen and coded paper system for doctors to record patient information</td>
+    </tr>
+    <tr>
+      <td>i2ifunding</td>
+      <td>Crowdfunding, Finance, Financial Services</td>
+      <td>Angel</td>
+      <td>₹50,000,000</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>i2ifunding is an online marketplace that connects borrowers looking for personal loans with investors looking for alternative investments.</td>
+    </tr>
+    <tr>
+      <td>ShakeDeal</td>
+      <td>B2B, E-Commerce, Enterprise</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Home of B2B Commerce</td>
+    </tr>
+    <tr>
+      <td>HelloVerify</td>
+      <td>Fraud Detection, Information Services, Security</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>HelloVerify is an online background check platform.</td>
+    </tr>
+    <tr>
+      <td>Fasal</td>
+      <td>Agriculture, AgTech, Artificial Intelligence, Internet of Things, Machine Learning</td>
+      <td>Seed</td>
+      <td>120000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Climate Smart Precision Agriculture Platform</td>
+    </tr>
+    <tr>
+      <td>CoinGeto</td>
+      <td>Cryptocurrency, Trading Platform</td>
+      <td>Seed</td>
+      <td>₹120,000,000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>CoinGeto is one of India’s most advanced digital assets exchange.</td>
+    </tr>
+    <tr>
+      <td>Avail Finance</td>
+      <td>Finance, FinTech, Mobile Payments</td>
+      <td>Series A</td>
+      <td>17200000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Avail is a mobile-first platform aiming to financially include the urban mass of India.</td>
+    </tr>
+    <tr>
+      <td>Tripeur</td>
+      <td>Information Technology</td>
+      <td>Seed</td>
+      <td>600000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Radical Travel Automation - Cloud Based Corporate Travel & Expense Management Software</td>
+    </tr>
+    <tr>
+      <td>Wedeterna</td>
+      <td>Wedding</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Wedeterna is a new-age, personalised and fresh approach to arranged marriages, DIY matrimonial community with only self created profiles.</td>
+    </tr>
+    <tr>
+      <td>Stumagz</td>
+      <td>Digital Media</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>Stumagz is about connecting with Stories Stumagz is about collaborating with people Stumagz is about creating a Cult.</td>
+    </tr>
+    <tr>
+      <td>Doubtnut</td>
+      <td>E-Learning, EdTech, Education, Image Recognition, Machine Learning, STEM Education</td>
+      <td>Seed</td>
+      <td>₹35,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Gurgaon based E-learning platform.</td>
+    </tr>
+    <tr>
+      <td>MCaffeine</td>
+      <td>Consumer Goods</td>
+      <td>Seed</td>
+      <td>₹32,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>MCaffeine is India's First Caffeine Infuse Personal Care Brand. It's an extension to the hyperactive lifestyle and individualistic identity.</td>
+    </tr>
+    <tr>
+      <td>TrustCheckr</td>
+      <td>Information Technology</td>
+      <td>Angel</td>
+      <td>100000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>A Bengaluru-based fraud analytics solution provider .</td>
+    </tr>
+    <tr>
+      <td>HealthAssure</td>
+      <td>Fitness, Health Care, Wellness</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>HealthAssure provides access to Discounted & High Quality primary care medical network.</td>
+    </tr>
+    <tr>
+      <td>Picture TIme</td>
+      <td>Digital Entertainment</td>
+      <td>Seed</td>
+      <td>₹250,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Operator of low-cost mobile cinema theatres in rural areas.</td>
+    </tr>
+    <tr>
+      <td>1Crowd</td>
+      <td>Crowdsourcing, Financial Services, Funding Platform, Venture Capital</td>
+      <td>Angel</td>
+      <td>3500000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Equity crowd funding platform focused on connecting investors with a host of extremely promising Indian start-ups and early stage ventures</td>
+    </tr>
+    <tr>
+      <td>Aarav Unmanned Systems</td>
+      <td>Delivery, Drones, Geospatial, Robotics</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Professional Drones for Enterprise Applications</td>
+    </tr>
+    <tr>
+      <td>Wellthy Therapeutics Pvt Ltd</td>
+      <td>Health Care, Hospital</td>
+      <td>Seed</td>
+      <td>₹135,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Wellthy is a digital therapeutics company focused on improving patient health through the intersection of technology, and clinical outcomes.</td>
+    </tr>
+    <tr>
+      <td>Nua</td>
+      <td>Consumer Goods</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Nua is an e-commerce and feminine care brand platform focused on creating women care products.</td>
+    </tr>
+    <tr>
+      <td>Kuvera.in</td>
+      <td>Financial Services</td>
+      <td>Angel</td>
+      <td>250000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>An online platform for mutual fund investments.</td>
+    </tr>
+    <tr>
+      <td>Livehealth</td>
+      <td>Health Care, Information Technology, Management Information Systems</td>
+      <td>Seed</td>
+      <td>1100000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Livehealth is an end-to-end collaborative report management solution. We help you get your medical reports instantly from various health</td>
+    </tr>
+    <tr>
+      <td>Gramophone</td>
+      <td>Farming</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Indore, Madhya Pradesh, India</td>
+      <td>An agricultural inputs startup Company.</td>
+    </tr>
+    <tr>
+      <td>Ora</td>
+      <td>Business Travel, Hospitality, Hotel, Marketplace, Tourism, Travel Accommodations</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Kolkata, West Bengal, India</td>
+      <td>Ora is an online marketplace of unique accommodations. Awarded as among top 3000 startups in India by IIM Kolkata.</td>
+    </tr>
+    <tr>
+      <td>Buddy4Study.com</td>
+      <td>Career Planning, Education, Higher Education, Service Industry</td>
+      <td>Series A</td>
+      <td>3000000</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>Buddy4Study is the best scholarship search engine for Indian students. It also helps organizations to set up their own scholarship schemes.</td>
+    </tr>
+    <tr>
+      <td>Predible Health</td>
+      <td>Medical Device</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Healthcare devices for cancer detection</td>
+    </tr>
+    <tr>
+      <td>Syncremedies Healthcare Pvt Ltd</td>
+      <td>Alternative Medicine, Health Care</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Syncremedies is an Integrated Medicine service that brings together Allopathy, Ayurveda and Homeopathy to treat chronic ailments.</td>
+    </tr>
+    <tr>
+      <td>Blueleaf Cyberspace Systems</td>
+      <td>Internet, Software</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Bluleaf Cyberspace is Cloud Based Software Company.</td>
+    </tr>
+    <tr>
+      <td>Toffee</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>1500000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Toffee is a bite size, micro-event & contextual insurtech startup which aims to de-jargonise the insurance buying experience.</td>
+    </tr>
+    <tr>
+      <td>ORO Wealth</td>
+      <td>—</td>
+      <td>Series A</td>
+      <td>1600000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Online wealth management platform</td>
+    </tr>
+    <tr>
+      <td>HealWell24</td>
+      <td>Dental, Elder Care, Health Care, Home Health Care, Personal Health</td>
+      <td>Seed</td>
+      <td>200000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>HealWell24 is India's emerging technology-empowered healthcare company, aiming to bring world-class quality healthcare services anywhere.</td>
+    </tr>
+    <tr>
+      <td>Acko General Insurance</td>
+      <td>Financial Services, Insurance, Private Social Networking</td>
+      <td>Series A</td>
+      <td>12000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Acko General Insurance is a digital insurance company in India that redefines insurance for the consumers.</td>
+    </tr>
+    <tr>
+      <td>arzooo.com</td>
+      <td>Consumer Electronics, E-Commerce, E-Commerce Platforms, Electronics, Shipping, Shopping</td>
+      <td>Seed</td>
+      <td>₹15,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>E-commerce website promising the best price on any product a consumer buys anywhere on the internet.</td>
+    </tr>
+    <tr>
+      <td>Bonphul Air Products</td>
+      <td>CleanTech</td>
+      <td>Angel</td>
+      <td>₹20,000,000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>A clean tech product Company</td>
+    </tr>
+    <tr>
+      <td>DheeYantra Research Labs</td>
+      <td>Artificial Intelligence</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>DheeYantra is building a cognitive conversational chatbot platform by name "dhee.ai" for vernacular languages</td>
+    </tr>
+    <tr>
+      <td>Edyoo</td>
+      <td>Education</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Edyoo.com is a technology platform that offers the most intuitive design, flexibility, and ease of use.</td>
+    </tr>
+    <tr>
+      <td>Chtrbox</td>
+      <td>Advertising, Internet, Marketing</td>
+      <td>Angel</td>
+      <td>₹10,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Chtrbox connects social media influencers with brands .</td>
+    </tr>
+    <tr>
+      <td>Aashiyaan Housing and Development Finance</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>₹135,000,000</td>
+      <td>Kolkata, West Bengal, India</td>
+      <td>Provide housing finance to those in the informal sector enabling the hither to un-served to own a home of their own.</td>
+    </tr>
+    <tr>
+      <td>BetterPlace Safety Solutions Pvt. Ltd.</td>
+      <td>Human Resources, Security, Training</td>
+      <td>Series A</td>
+      <td>3000000</td>
+      <td>Bangalore City, Karnataka, India</td>
+      <td>BetterPlace provides businesses with contractor workforce management, including onboarding, training, and background checks.</td>
+    </tr>
+    <tr>
+      <td>Cashkumar</td>
+      <td>Consumer Lending, Finance, FinTech</td>
+      <td>Seed</td>
+      <td>₹50,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>A P2P Lending Platform connecting millions of financially under-served & new to credit borrowers with investment savvy lenders in India</td>
+    </tr>
+    <tr>
+      <td>Rocketium</td>
+      <td>Marketing, Social Media, Video</td>
+      <td>Seed</td>
+      <td>₹20,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Easy video creation for social media.</td>
+    </tr>
+    <tr>
+      <td>FreightBazaar</td>
+      <td>Transportation</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>FreightBazaar.com is an online platform that connects Truck suppliers with Truck users.</td>
+    </tr>
+    <tr>
+      <td>OPEN</td>
+      <td>Banking</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Open up to a new world of Banking</td>
+    </tr>
+    <tr>
+      <td>mfine</td>
+      <td>Health Care, Hospital</td>
+      <td>Series A</td>
+      <td>4200000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Hospital & Health Care Start up</td>
+    </tr>
+    <tr>
+      <td>Earth Food</td>
+      <td>Food and Beverage, Food Processing</td>
+      <td>Seed</td>
+      <td>₹64,000,000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Earth Food is a healthy Food Start Up.</td>
+    </tr>
+    <tr>
+      <td>Charcoal Eats</td>
+      <td>Food Processing</td>
+      <td>Seed</td>
+      <td>₹50,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Charcoal Eats aims to bring Dominos style standardisation.</td>
+    </tr>
+    <tr>
+      <td>Wishfie</td>
+      <td>Apps</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>A platform for people to express their opinions in form of short videos around any topic.</td>
+    </tr>
+    <tr>
+      <td>The Social Hook</td>
+      <td>Marketing</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Fast growing Influencer Marketing platform in India.</td>
+    </tr>
+    <tr>
+      <td>FreightBro</td>
+      <td>Apps, B2B, Freight Service, Logistics, SaaS, Shipping, Supply Chain Management, Transportation</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Software for the new-age freight</td>
+    </tr>
+    <tr>
+      <td>Finwego</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Finwego partners with Small and Medium Businesses in India to offer convenient and responsible credit to their employees</td>
+    </tr>
+    <tr>
+      <td>Cricnwin</td>
+      <td>Digital Entertainment, Fantasy Sports, Gaming, Sports</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Cricnwin is a Gurugram - based Fan Engagement Platform</td>
+    </tr>
+    <tr>
+      <td>TheCollegeFever</td>
+      <td>Brand Marketing, Event Promotion, Marketing, Sponsorship, Ticketing</td>
+      <td>Seed</td>
+      <td>250000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>TheCollegeFever is a hub for fun, fiesta and frolic of Colleges.</td>
+    </tr>
+    <tr>
+      <td>Wicked Ride Adventure Services Private Limited</td>
+      <td>Automotive, Last Mile Transportation, Peer to Peer, Ride Sharing</td>
+      <td>Venture - Series Unknown</td>
+      <td>$10,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Peer-to-Peer motor vehicles sharing</td>
+    </tr>
+    <tr>
+      <td>Career Anna</td>
+      <td>Commercial, E-Learning, Education</td>
+      <td>Seed</td>
+      <td>₹40,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>India's Go to Career Commerce Portal</td>
+    </tr>
+    <tr>
+      <td>ERUDITUS Executive Education</td>
+      <td>Continuing Education, EdTech, Education, Skill Assessment</td>
+      <td>Series C</td>
+      <td>$40,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Eruditus, promoted by Alumni of INSEAD and other top business schools, delivers high quality executive education programmes</td>
+    </tr>
+    <tr>
+      <td>Gaia Smart Cities</td>
+      <td>Smart Cities, Telecommunications</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Gaia Smart Cities is an early leader in the rapidly-emerging Internet of Things (IoT) marketplace.</td>
+    </tr>
+    <tr>
+      <td>Square Off</td>
+      <td>Internet of Things, Robotics</td>
+      <td>Seed</td>
+      <td>$1,100,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Delivering Imagination</td>
+    </tr>
+    <tr>
+      <td>UrbanClap</td>
+      <td>Apps, Home Services, Information Services, Information Technology</td>
+      <td>Series D</td>
+      <td>$50,000,000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>UrbanClap is India's leading managed marketplace for home services.</td>
+    </tr>
+    <tr>
+      <td>Hospals</td>
+      <td>Medical, Tourism</td>
+      <td>Seed</td>
+      <td>$1,500,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Hospals is a medical tourism company.</td>
+    </tr>
+    <tr>
+      <td>Kogta Financial India Limited</td>
+      <td>Financial Services</td>
+      <td>Series B</td>
+      <td>₹1,540,000,000</td>
+      <td>Jaipur, Rajasthan, India</td>
+      <td>Kogta Financial (India) Ltd is a retail-focused non banking financial company .</td>
+    </tr>
+    <tr>
+      <td>Perspectico</td>
+      <td>Career Planning, Education, Internet</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>An Education Management startup.</td>
+    </tr>
+    <tr>
+      <td>The Souled Store</td>
+      <td>Fashion, Graphic Design, Wearables</td>
+      <td>Venture - Series Unknown</td>
+      <td>$3,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>The Souled Store bring to you awesome t-shirts, framed prints, badges, notebooks, coasters.</td>
+    </tr>
+    <tr>
+      <td>Hush - Speak Up. Make Work Better</td>
+      <td>Communities, Leisure, Mobile Apps, Software</td>
+      <td>Seed</td>
+      <td>₹45,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Enabling diversity of opinions in organizations</td>
+    </tr>
+    <tr>
+      <td>Drivezy</td>
+      <td>Automotive, Rental, Sharing Economy</td>
+      <td>Debt Financing</td>
+      <td>$100,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Drivezy is India's largest vehicle sharing platform which helps people turn their vehicles into earning members of their family.</td>
+    </tr>
+    <tr>
+      <td>Freyr Energy</td>
+      <td>Energy, Environmental Consulting, Renewable Energy, Solar</td>
+      <td>Series A</td>
+      <td>$1,500,000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>Freyr Energy is a company that provides full service solar provider based in Hyderabad, India.</td>
+    </tr>
+    <tr>
+      <td>NIRAMAI Health Analytix</td>
+      <td>Health Care, Hospital</td>
+      <td>Seed</td>
+      <td>$6,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>NIRAMAI has developed a novel breast cancer screening solution that uses Thermalytix.</td>
+    </tr>
+    <tr>
+      <td>CloudSek</td>
+      <td>Information Technology, SaaS, Security</td>
+      <td>Seed</td>
+      <td>₹140,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Cloudsek is an Infosec Risk assessment company which provides intelligence needed to tackle online threats.</td>
+    </tr>
+    <tr>
+      <td>Lendbox</td>
+      <td>Crowdfunding, Financial Services, Internet</td>
+      <td>Seed</td>
+      <td>₹60,000,000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>Lendbox is India's leading peer-to-peer lending online lending platform.</td>
+    </tr>
+    <tr>
+      <td>Verloop</td>
+      <td>Customer Service, Information Technology, Internet, Sales Automation</td>
+      <td>Series A</td>
+      <td>$3,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Verloop is an automated customer support and engagement platform.</td>
+    </tr>
+    <tr>
+      <td>Flickstree</td>
+      <td>Advertising, Artificial Intelligence, Digital Media, iOS, Location Based Services, News, Video, Video on Demand, Video Streaming</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Flickstree is a smart video content aggregator, powered by Artificial Intelligence.</td>
+    </tr>
+    <tr>
+      <td>Paymatrix</td>
+      <td>Credit Cards, Payments, Property Insurance, Property Management, Rental Property</td>
+      <td>Seed</td>
+      <td>$100,000</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>India's Leading Property Rent management platform</td>
+    </tr>
+    <tr>
+      <td>Idha Skin Clinic</td>
+      <td>Beauty, Cosmetics, Health Care, Service Industry</td>
+      <td>Seed</td>
+      <td>₹5,000,000</td>
+      <td>Bangalore City, Karnataka, India</td>
+      <td>Idha skin clinic jayanagar is dedicated to restore health and natural beauty to your skin.</td>
+    </tr>
+    <tr>
+      <td>InCred</td>
+      <td>Banking, Finance, Financial Services</td>
+      <td>Private Equity</td>
+      <td>$41,900,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>InCred Finance is a mumbai-based non-banking financial company</td>
+    </tr>
+    <tr>
+      <td>Vedantu</td>
+      <td>EdTech, Education, Mobile, Tutoring</td>
+      <td>Series B</td>
+      <td>$11,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Vedantu provides personalized LIVE Online Tutoring. Vedantu aims to democratize teaching by creating a marketplace of Teachers</td>
+    </tr>
+    <tr>
+      <td>Sportido</td>
+      <td>Social Media, Sports</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>Sportido is a sports discovery app that helps you find people and places to play 700+ sports around you.</td>
+    </tr>
+    <tr>
+      <td>Stelis Biopharma</td>
+      <td>Biopharma</td>
+      <td>Series B</td>
+      <td>$100,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Stelis Biopharma is a vertically integrated biopharmaceutical company</td>
+    </tr>
+    <tr>
+      <td>Magicpin</td>
+      <td>E-Commerce, E-Commerce Platforms, Retail</td>
+      <td>Series C</td>
+      <td>₹1,410,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Magicpin is a platform where users and merchants in a locality discover, interact, and transact.</td>
+    </tr>
+    <tr>
+      <td>Try & Buy</td>
+      <td>E-Commerce, Fashion, Shopping</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Try & Buy</td>
+    </tr>
+    <tr>
+      <td>Mech Mocha</td>
+      <td>Digital Entertainment, Mobile, PC Games</td>
+      <td>Series B</td>
+      <td>$3,530,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Mech Mocha is a mobile gaming startup based in Bangalore working towards ‘Making India Play’ .</td>
+    </tr>
+    <tr>
+      <td>Aye Finance</td>
+      <td>Finance, Financial Services, Small and Medium Businesses</td>
+      <td>Debt Financing</td>
+      <td>₹72,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Aye Finance provides financial services to micro and small businesses in Northern India.</td>
+    </tr>
+    <tr>
+      <td>Aldopay</td>
+      <td>Mobile Payments</td>
+      <td>Seed</td>
+      <td>$200,000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Mobile Wallet Focusing on hassle free checkout via Finger Print & OTP.</td>
+    </tr>
+    <tr>
+      <td>Detect Technologies</td>
+      <td>Artificial Intelligence, Energy, Oil and Gas</td>
+      <td>Series A</td>
+      <td>$3,300,000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Completely automated remote control system.</td>
+    </tr>
+    <tr>
+      <td>Signzy</td>
+      <td>Computer, FinTech, Risk Management, Software</td>
+      <td>Series A</td>
+      <td>₹240,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Signzy are creating 'building blocks for a Digital Trust system.</td>
+    </tr>
+    <tr>
+      <td>CashRich</td>
+      <td>Apps, Financial Services, FinTech</td>
+      <td>Seed</td>
+      <td>$1,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>A Mumbai-based fin-tech startup</td>
+    </tr>
+    <tr>
+      <td>Cloudnine Hospitals</td>
+      <td>Child Care, Health Care, Hospital, Medical, Women's</td>
+      <td>Private Equity</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Cloudnine is an Indian chain of women and child care hospitals.</td>
+    </tr>
+    <tr>
+      <td>CropIn Technologies</td>
+      <td>Agriculture, Mobile</td>
+      <td>Series B</td>
+      <td>₹580,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>To discover, develop and deliver innovative solution in Agtech Space</td>
+    </tr>
+    <tr>
+      <td>Billdesk</td>
+      <td>Finance, FinTech, Payments, Property Development, Rental</td>
+      <td>Venture - Series Unknown</td>
+      <td>—</td>
+      <td>Ahmedabad, Gujarat, India</td>
+      <td>BillDesk, a property of IndiaIdeas.com Ltd. was conceived in early 2000 to solve the frustrations of most of us when it comes to paying</td>
+    </tr>
+    <tr>
+      <td>Yaantra</td>
+      <td>Information Services, Information Technology, Mobile, Software</td>
+      <td>Debt Financing</td>
+      <td>$2,000,000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>Yaantra, India’s leading mobile phone repair, refurbished & Unboxed centre In India</td>
+    </tr>
+    <tr>
+      <td>TECHBOOZE</td>
+      <td>Education</td>
+      <td>Seed</td>
+      <td>$100,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Techbooze[1] "AN OPEN FORUM" is an educational enterprise, headquartered in India working across the country.</td>
+    </tr>
+    <tr>
+      <td>HealthifyMe</td>
+      <td>Apps, Fitness, Health Care, mHealth</td>
+      <td>Series B</td>
+      <td>$6,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>HealthifyMe is an application that allows its users to achieve their fitness and weight loss goals from their computers and smartphones.</td>
+    </tr>
+    <tr>
+      <td>hoi foods</td>
+      <td>Food and Beverage, Food Delivery</td>
+      <td>Seed</td>
+      <td>₹36,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>India's first hotel dedicated food brand which promises great in room dining experience in budget hotels</td>
+    </tr>
+    <tr>
+      <td>Perpule</td>
+      <td>Apps, Payments, Retail</td>
+      <td>Series A</td>
+      <td>₹340,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Perpule is a self-checkout product for retail outlets to enhance the shopping experience of the customers.</td>
+    </tr>
+    <tr>
+      <td>Royal Sundaram General Insurance Co. Limited</td>
+      <td>Health Insurance, Insurance, Life Insurance</td>
+      <td>Corporate Round</td>
+      <td>$210,000,000</td>
+      <td>Kalpakkam, Tamil Nadu, India</td>
+      <td>Royal Sundaram provides comprehensive insurance plans and innovative insurance solutions to individuals, families and businesses.</td>
+    </tr>
+    <tr>
+      <td>CleanseCar</td>
+      <td>Automotive</td>
+      <td>Angel</td>
+      <td>₹35,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>CleanseCar is a company provides Washing and Repair Services.</td>
+    </tr>
+    <tr>
+      <td>DRIVEU</td>
+      <td>Rental, Taxi Service, Travel</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹70,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>DriveU is a convenient and a quick way of getting on demand drivers for consumers and businesses</td>
+    </tr>
+    <tr>
+      <td>Spinny</td>
+      <td>E-Commerce, E-Commerce Platforms, Internet, Retail</td>
+      <td>Series A</td>
+      <td>$11,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Used cars marketplace in India. Ushering new era of transparency and convenience.</td>
+    </tr>
+    <tr>
+      <td>Asset Reconstruction Company (India) Ltd.</td>
+      <td>Financial Services, Professional Services</td>
+      <td>Secondary Market</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Asset Reconstruction Company (India) Ltd. operates as a asset reconstruction company.</td>
+    </tr>
+    <tr>
+      <td>Med365 Healthcare</td>
+      <td>Health Diagnostics</td>
+      <td>Seed</td>
+      <td>₹50,000,000</td>
+      <td>Jaipur, Rajasthan, India</td>
+      <td>Wellness, Specialised Testing, Healthcare at Home</td>
+    </tr>
+    <tr>
+      <td>Dunzo</td>
+      <td>Customer Service, Messaging, Mobile Apps, Personalization</td>
+      <td>Debt Financing</td>
+      <td>₹70,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Dunzo is an app that connects you with the nearest available delivery partner to pickup or deliver items for you.</td>
+    </tr>
+    <tr>
+      <td>Mobile Premier League (MPL)</td>
+      <td>Gaming, iOS, Sports</td>
+      <td>Series A</td>
+      <td>$5,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Mobile Premier League(MPL) is a skill based E-Sports platform where you can play your favourite mobile games and win real cash always.</td>
+    </tr>
+    <tr>
+      <td>WalMart India</td>
+      <td>Retail</td>
+      <td>Venture - Series Unknown</td>
+      <td>$37,680,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Wal-Mart India Private Limited is a wholly owned subsidiary of Walmart Stores Inc.,</td>
+    </tr>
+    <tr>
+      <td>Cred</td>
+      <td>—</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Cred is a platform to celebrate and reward the most creditworthy people of India.</td>
+    </tr>
+    <tr>
+      <td>Meesho</td>
+      <td>E-Commerce, E-Commerce Platforms, Internet, Mobile Apps, Social Media</td>
+      <td>Series C</td>
+      <td>$50,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Meesho is an online reseller network of housewives and SMBs, who sell products within their network on social channels.</td>
+    </tr>
+    <tr>
+      <td>BhaskarGuru</td>
+      <td>Search Engine</td>
+      <td>Seed</td>
+      <td>$1,000,000</td>
+      <td>Bhopal, Madhya Pradesh, India</td>
+      <td>Bhaskarguru.com is your local search Engine</td>
+    </tr>
+    <tr>
+      <td>Gugu</td>
+      <td>Battery, Electric Vehicle, Energy, Renewable Energy, Transportation</td>
+      <td>Seed</td>
+      <td>$250,000</td>
+      <td>Coimbatore, Tamil Nadu, India</td>
+      <td>Gugu designs & Sells all Electric Connected Two-wheeler's with Network of Open & Free Fast charging Stations across India.</td>
+    </tr>
+    <tr>
+      <td>FarmTaaza</td>
+      <td>Agriculture, Farmers Market, Farming</td>
+      <td>Series A</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Farm Taaza provides expert advice to the farmers on improving the yield and improving the field operations of the farmer.</td>
+    </tr>
+    <tr>
+      <td>Vizzbee</td>
+      <td>Artificial Intelligence, Drones, Navigation, Packaging Services, Robotics</td>
+      <td>Pre-Seed</td>
+      <td>$20,000</td>
+      <td>Bhopal, Madhya Pradesh, India</td>
+      <td>Autonomous Drone Solutions for last mile delivery as well as search and rescue</td>
+    </tr>
+    <tr>
+      <td>BIGPHI TECHNOLOGIES PVT. LTD.</td>
+      <td>Fashion</td>
+      <td>Angel</td>
+      <td>$900,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>BIGPHI technologies is the India's first technologically advanced apparel and wearable company.</td>
+    </tr>
+    <tr>
+      <td>Mobycy</td>
+      <td>Fitness, GreenTech, Internet of Things, Mobile Apps, Ride Sharing, Transportation</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>India's 1st Dockless Bicycle Sharing App</td>
+    </tr>
+    <tr>
+      <td>Traveo Soft Pvt. Ltd.</td>
+      <td>Mobile, Software, Travel</td>
+      <td>Undisclosed</td>
+      <td>₹1,200,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>AI based Business Travel & Expense management</td>
+    </tr>
+    <tr>
+      <td>Em Personal Care</td>
+      <td>Cosmetics</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Worli, Maharashtra, India</td>
+      <td>Em Personal Care is a Cosmetic products manufacturing Company.</td>
+    </tr>
+    <tr>
+      <td>Lucideus</td>
+      <td>Consulting, Cyber Security, Network Security</td>
+      <td>Venture - Series Unknown</td>
+      <td>5000000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Lucideus is a cybersecurity company that offers its customers with consultancy, training, and solutions to counteract cyber-attacks.</td>
+    </tr>
+    <tr>
+      <td>Eupheus Learning</td>
+      <td>E-Learning, EdTech, Education</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Delhi, Delhi, India</td>
+      <td>Eupheus Learning offers a seamless integrated learning solution for the K-12 market in India.</td>
+    </tr>
+    <tr>
+      <td>GamingMonk</td>
+      <td>eSports, Gaming, Video Games</td>
+      <td>Series A</td>
+      <td>₹40,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>GamingMonk is an eSports gaming company based out of New Delhi, India.</td>
+    </tr>
+    <tr>
+      <td>Sukkhi Jewellery</td>
+      <td>Fashion, Jewelry</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹510,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Sukkhi Jewellery is a Contemporary fashion jewellery brand.</td>
+    </tr>
+    <tr>
+      <td>INDwealth</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>₹2,200,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>INDwealth is an Artificial Intelligence (AI) powered wealth management company</td>
+    </tr>
+    <tr>
+      <td>Medikabazaar</td>
+      <td>B2B, Medical Device</td>
+      <td>Series A</td>
+      <td>5000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>India's largest medical and surgical supplies marketplace</td>
+    </tr>
+    <tr>
+      <td>NIRA</td>
+      <td>Credit, Financial Services, FinTech, Lending</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>NIRA promotes financial inclusion by creating simple, transparent products that empower individuals to live a life of choice and freedom.</td>
+    </tr>
+    <tr>
+      <td>Duroflex Pvt. Ltd.</td>
+      <td>Consumer Goods, Manufacturing</td>
+      <td>Private Equity</td>
+      <td>22000000</td>
+      <td>Alleppey, Kerala, India</td>
+      <td>Duroflex Pvt. Ltd. operates as a dominant mattress player.</td>
+    </tr>
+    <tr>
+      <td>Clensta</td>
+      <td>Biotechnology, Health Care, Wellness</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>A biotechnology start-up was incorporated to improve the National Hygiene condition whilst addressing the aspect of water conservation.</td>
+    </tr>
+    <tr>
+      <td>Jetbrain Robotics</td>
+      <td>Health Care, Hospital, Medical, Robotics</td>
+      <td>Seed</td>
+      <td>70000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Jetbrain Robotics is Hong Kong / Gurgaon based company, building advanced robotic transportation solutions for multi speciality hospitals.</td>
+    </tr>
+    <tr>
+      <td>Medimetry</td>
+      <td>Health Care</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Haryana, Haryana, India</td>
+      <td>MediMetry is an online platform where patients can consult specialists doctors online - from anywhere, at anytime.</td>
+    </tr>
+    <tr>
+      <td>Healthkart</td>
+      <td>E-Commerce, Fitness, Health Care</td>
+      <td>Venture - Series Unknown</td>
+      <td>10000000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>The one stop shop for health, fitness & beauty.</td>
+    </tr>
+    <tr>
+      <td>Indiabulls Ventures</td>
+      <td>Financial Services, Venture Capital</td>
+      <td>Post-IPO Equity</td>
+      <td>₹15,392,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Indiabulls Ventures Limited is one of India’s leading capital market companies providing securities and derivative broking services.</td>
+    </tr>
+    <tr>
+      <td>Vistara</td>
+      <td>Aerospace</td>
+      <td>Private Equity</td>
+      <td>₹20,000,000,000</td>
+      <td>Haryana, Haryana, India</td>
+      <td>Vistara is a joint venture of Tata Sons Limited and Singapore Airlines Limited (SIA)</td>
+    </tr>
+    <tr>
+      <td>ClearTax</td>
+      <td>Accounting, Apps, FinTech</td>
+      <td>Series B</td>
+      <td>₹4,000,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>ClearTax India helps individuals prepare and e-file their Income Tax Return online.</td>
+    </tr>
+    <tr>
+      <td>Shuttl</td>
+      <td>Apps, Mobile, Transportation</td>
+      <td>Debt Financing</td>
+      <td>1000000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Shuttl provides an app-based office shuttle service to make daily commute safe, reliable, affordable and dignified for everyone.</td>
+    </tr>
+    <tr>
+      <td>GuruQ</td>
+      <td>Reading Apps</td>
+      <td>Seed</td>
+      <td>₹25,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>A one of its kind digital integrated platform connecting tutors and students.</td>
+    </tr>
+    <tr>
+      <td>Azure Power</td>
+      <td>Energy, Renewable Energy, Solar</td>
+      <td>Post-IPO Equity</td>
+      <td>185000000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Azure Power produces and distributes solar power to commercial, government, and utility customers in India.</td>
+    </tr>
+    <tr>
+      <td>Cube</td>
+      <td>Banking, Financial Services, FinTech</td>
+      <td>Series A</td>
+      <td>₹140,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Cube is consumer banking focused fintech company.</td>
+    </tr>
+    <tr>
+      <td>RAHI Care</td>
+      <td>Health Care, Hospital</td>
+      <td>Venture - Series Unknown</td>
+      <td>—</td>
+      <td>Chandigarh, Chandigarh, India</td>
+      <td>RAHI Care is a Health Care company.</td>
+    </tr>
+    <tr>
+      <td>Mynvax</td>
+      <td>Biotechnology</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Mynvax is a biotech Company.</td>
+    </tr>
+    <tr>
+      <td>Loans4SME</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Loans4SME is an alternative lending platform.</td>
+    </tr>
+    <tr>
+      <td>UpCyclersLab</td>
+      <td>Apps, Education, Retail</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>UpCyclersLab is a startup that makes sustainability-based learning tools for children above the age of five.</td>
+    </tr>
+    <tr>
+      <td>Cellerite Systems</td>
+      <td>Electric Vehicle</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>Cellerite Systems is a charging solutions provider for electric vehicles.</td>
+    </tr>
+    <tr>
+      <td>Taru Naturals</td>
+      <td>Agriculture, Farming</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Taru Naturals is a network that connects farmer communities with clean technology and renewable energy.</td>
+    </tr>
+    <tr>
+      <td>LetsMD</td>
+      <td>Fitness, Health Care, Wellness</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>LetsMD.com is a marketplace for elective surgeries</td>
+    </tr>
+    <tr>
+      <td>Twenty Two Motors</td>
+      <td>Automotive, Battery, Electric Vehicle, Manufacturing, Mechanical Design</td>
+      <td>Corporate Round</td>
+      <td>65000000</td>
+      <td>Haryana, Haryana, India</td>
+      <td>Twenty Two Motors aim of making cutting edge EV technology affordable for the current generation.</td>
+    </tr>
+    <tr>
+      <td>Truebil</td>
+      <td>Automotive, E-Commerce, Marketplace</td>
+      <td>Series A</td>
+      <td>2000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Truebil is a team of young, highly motivated professionals who strive to help you buy and sell used cars in the simplest way possible.</td>
+    </tr>
+    <tr>
+      <td>FarmersFZ</td>
+      <td>Agriculture</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Kochi, Kerala, India</td>
+      <td>FarmersFZ is an online venture for fresh and safe vegetables and agri products.</td>
+    </tr>
+    <tr>
+      <td>Worxogo</td>
+      <td>Information Technology</td>
+      <td>Series A</td>
+      <td>₹165,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>worxogo’s is a pioneering persuasive technology products align employee behaviours .</td>
+    </tr>
+    <tr>
+      <td>Vivish Technologies (myGate)</td>
+      <td>Apps, Information Services, Information Technology</td>
+      <td>Series A</td>
+      <td>₹650,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>India's leading mobile based security management solution .</td>
+    </tr>
+    <tr>
+      <td>Singularity Dynamics</td>
+      <td>Artificial Intelligence</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Singularity Dynamics is a Chip-design testing startup.</td>
+    </tr>
+    <tr>
+      <td>Virtual MetalStreet(MetalStreet)</td>
+      <td>B2B, Marketplace</td>
+      <td>Angel</td>
+      <td>700000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Virtual MetalStreet(Metalstreet) is a B2B marketplace for steel trading in India</td>
+    </tr>
+    <tr>
+      <td>Veritas Finance</td>
+      <td>Financial Services</td>
+      <td>Venture - Series Unknown</td>
+      <td>30000000</td>
+      <td>Guindy, Tamil Nadu, India</td>
+      <td>Veritas Finance has been promoted with a primary purpose of meeting the working capital and business credit requirements of the small bus.</td>
+    </tr>
+    <tr>
+      <td>Manjushree Technopack</td>
+      <td>Packaging Services</td>
+      <td>Private Equity</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Manjushree Technopack is a Rigid plastics packaging convertor in India and South Asia.</td>
+    </tr>
+    <tr>
+      <td>GoZefo</td>
+      <td>Computer, Furniture, Software</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹210,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Startup working on a white space in the eCommerce industry.</td>
+    </tr>
+    <tr>
+      <td>Zomato</td>
+      <td>Food Delivery, Hospitality, Reservations, Restaurants, Search Engine</td>
+      <td>Secondary Market</td>
+      <td>210000000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Zomato is a search app offering detailed information for restaurants as well as online food delivery.</td>
+    </tr>
+    <tr>
+      <td>Innov8 Coworking</td>
+      <td>Collaboration, Communities, Coworking, Real Estate</td>
+      <td>Seed</td>
+      <td>4000000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Innov8 is a Y- Combinator backed company that offers coworking and shared office spaces.</td>
+    </tr>
+    <tr>
+      <td>RevFin</td>
+      <td>Accounting, Banking, Finance</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Delhi, Delhi, India</td>
+      <td>RevFin is a digital lending company.</td>
+    </tr>
+    <tr>
+      <td>Lavelle Networks</td>
+      <td>Cloud Computing, Enterprise Software, Network Hardware, Network Security, SaaS</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹20,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Lavelle Networks provides Software Defined WAN (SD-WAN) Solutions to build end to end Enterprise Networking Platforms for tomorrow</td>
+    </tr>
+    <tr>
+      <td>Blackbuck</td>
+      <td>Information Services, Internet, Logistics, Supply Chain Management, Transportation</td>
+      <td>Series D</td>
+      <td>₹2,029,600,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Blackbuck is a logistics startup based in India.</td>
+    </tr>
+    <tr>
+      <td>Cardekho</td>
+      <td>Automotive, E-Commerce, Information Services</td>
+      <td>Series C</td>
+      <td>75000000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Cardekho is a car search venture that helps users buy cars that are right for them.</td>
+    </tr>
+    <tr>
+      <td>ElasticRun</td>
+      <td>Delivery, Logistics, Transportation</td>
+      <td>Series B</td>
+      <td>₹600,000,000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>ElasticRun develops an online system that improves the reception of orders from customers and the dispatch of delivery drivers in India.</td>
+    </tr>
+    <tr>
+      <td>Droom Technology Private Limited</td>
+      <td>Automotive, E-Commerce Platforms, Marketplace</td>
+      <td>Series E</td>
+      <td>30000000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Droom is a marketplace for automobiles and automobile services.</td>
+    </tr>
+    <tr>
+      <td>Vogo Rentals</td>
+      <td>Last Mile Transportation, Railroad, Transportation, Travel</td>
+      <td>Debt Financing</td>
+      <td>₹80,000,000</td>
+      <td>Kormangala, Karnataka, India</td>
+      <td>Vogo is a dockless scooter rental company in India which lets customers rent scooters for short one way trips.</td>
+    </tr>
+    <tr>
+      <td>InnerChef</td>
+      <td>Cooking, E-Commerce, Food and Beverage, Food Delivery, Online Portals</td>
+      <td>Venture - Series Unknown</td>
+      <td>1760000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>InnerChef is an online food discovery and delivery experience that will make the foodie in you come alive.</td>
+    </tr>
+    <tr>
+      <td>LivQuik</td>
+      <td>FinTech, Mobile, Mobile Payments, Payments, Retail Technology</td>
+      <td>Corporate Round</td>
+      <td>2700000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>LivQuik was incorporated with the vision to simplify payments for merchants and consumers in an increasingly digital world</td>
+    </tr>
+    <tr>
+      <td>Disprz</td>
+      <td>E-Learning, Education</td>
+      <td>Debt Financing</td>
+      <td>400000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Disprz is a one-of-its-kind “knowledge-tech” start-up that strives to make people knowledgeable, productive and smarter at what they do.</td>
+    </tr>
+    <tr>
+      <td>9stacks</td>
+      <td>Online Games, Software</td>
+      <td>Series A</td>
+      <td>₹280,000,000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>Online gaming startup.</td>
+    </tr>
+    <tr>
+      <td>Origo</td>
+      <td>—</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹800,000,000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Origo Commodities, a complete post-harvest management services for agricultural commodities, is the fastest growing company in its sector.</td>
+    </tr>
+    <tr>
+      <td>YourOwnROOM</td>
+      <td>Online Portals, Property Management, Rental</td>
+      <td>Seed</td>
+      <td>750000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Good quality, strategically located homes closer to work for millennials</td>
+    </tr>
+    <tr>
+      <td>Vahdam Teas</td>
+      <td>E-Commerce, Food and Beverage, Tea</td>
+      <td>Series B</td>
+      <td>2500000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Vahdam Teas is a vertically integrated online-first tea brand that sources premium garden fresh teas direct from over 150+ tea plantations.</td>
+    </tr>
+    <tr>
+      <td>Spoofin</td>
+      <td>Music, Social Network, Video</td>
+      <td>Venture - Series Unknown</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>A social networking app that lets you create and view Spoofs of your favourite videos.</td>
+    </tr>
+    <tr>
+      <td>Strom Motors</td>
+      <td>Automotive</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Strom Motors is a smart urban mobility Company.</td>
+    </tr>
+    <tr>
+      <td>PharmEasy</td>
+      <td>Health Care, Pharmaceutical, Wellness</td>
+      <td>Series C</td>
+      <td>80000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>PharmEasy - Indias largest healthcare delivery platform</td>
+    </tr>
+    <tr>
+      <td>Licious</td>
+      <td>Delivery Service, Food and Beverage, Food Delivery</td>
+      <td>Series C</td>
+      <td>25000000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Licious is an online meat and fish ordering startup that solves existing problem of finding safe, delectable, trustworthy fresh meat.</td>
+    </tr>
+    <tr>
+      <td>Stanza Living</td>
+      <td>Hospitality, Information Technology, Travel Accommodations</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹730,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Stanza Living is a co-living platform created for students moving to a new place.</td>
+    </tr>
+    <tr>
+      <td>docturnal</td>
+      <td>Biotechnology, Diabetes, Health Care</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Hyderabad, Andhra Pradesh, India</td>
+      <td>Docturnal, an online platform, enables individuals to find information and diagnostic services related to diabetes, cancer, and more.</td>
+    </tr>
+    <tr>
+      <td>Bounce (Metro Bikes)</td>
+      <td>Autonomous Vehicles, Last Mile Transportation, Recreational Vehicles, Rental</td>
+      <td>Debt Financing</td>
+      <td>3000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Bounce (formerly Metro Bikes) is an urban mobility solution that makes daily commute stress-free, time-saving, reliable, and convenient.</td>
+    </tr>
+    <tr>
+      <td>Technology 9 Labs (T9L)</td>
+      <td>Information Technology</td>
+      <td>Corporate Round</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Technology 9 Labs is an Information Technology and Services company.</td>
+    </tr>
+    <tr>
+      <td>Goals101</td>
+      <td>Financial Services</td>
+      <td>Seed</td>
+      <td>3500000</td>
+      <td>Delhi, Delhi, India</td>
+      <td>Goals101 is a one of the fastest growing big-data platforms.</td>
+    </tr>
+    <tr>
+      <td>Satya MicroCapital</td>
+      <td>Finance, Financial Exchanges, Financial Services, Micro Lending</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹400,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>New Delhi-based non-banking financial company.</td>
+    </tr>
+    <tr>
+      <td>Ummeed Housing Finance Private Limited</td>
+      <td>Finance, Financial Services</td>
+      <td>Series C</td>
+      <td>₹600,000,000</td>
+      <td>Haryana, Haryana, India</td>
+      <td>Ummeed Housing Finance Private Limited</td>
+    </tr>
+    <tr>
+      <td>StockEdge</td>
+      <td>Analytics, Apps, Market Research</td>
+      <td>Seed</td>
+      <td>1100000</td>
+      <td>Kolkata, West Bengal, India</td>
+      <td>StockEdge is a unique platform, which is 100% focused on research and analytics</td>
+    </tr>
+    <tr>
+      <td>Sequretek</td>
+      <td>—</td>
+      <td>Venture - Series Unknown</td>
+      <td>3700000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Sequretek is a cyber security start-up.</td>
+    </tr>
+    <tr>
+      <td>Avenues Payments India Pvt. Ltd.</td>
+      <td>—</td>
+      <td>Corporate Round</td>
+      <td>1300000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Avenues Payments is an IT solutions provider for the remittance\money transfer and forex industries.</td>
+    </tr>
+    <tr>
+      <td>Qbera</td>
+      <td>Finance, Financial Services</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹140,000,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Qbera is a managed marketplace for unsecured personal loans.</td>
+    </tr>
+    <tr>
+      <td>Urban Ladder</td>
+      <td>E-Commerce, E-Commerce Platforms, Furniture, Home Decor, Internet</td>
+      <td>Debt Financing</td>
+      <td>5600000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Urban Ladder is a Bangalore-based online furniture company.</td>
+    </tr>
+    <tr>
+      <td>Planet11 eCommerce Solutions India (Avenue11)</td>
+      <td>—</td>
+      <td>Corporate Round</td>
+      <td>₹260,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Planet11 is backed by SK Planet, which is a part of the SK Group – one of the largest conglomerates in South Korea.</td>
+    </tr>
+    <tr>
+      <td>DailyNinja</td>
+      <td>Apps, Mobile, Mobile Apps, Software</td>
+      <td>Series A</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Daily Ninja, a mobile app that delivers daily needs on a subscription model</td>
+    </tr>
+    <tr>
+      <td>Iba Halal Care</td>
+      <td>—</td>
+      <td>Series A</td>
+      <td>₹150,000,000</td>
+      <td>Ahmedabad, Gujarat, India</td>
+      <td>Iba Halal Care is a cosmetics brand company.</td>
+    </tr>
+    <tr>
+      <td>Knocksense</td>
+      <td>News, Publishing, Social Media</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Lucknow, Uttar Pradesh, India</td>
+      <td>Knocksense is a fast growing lifestyle website.</td>
+    </tr>
+    <tr>
+      <td>Togedr</td>
+      <td>—</td>
+      <td>Venture - Series Unknown</td>
+      <td>—</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Togedr is an activity discovery & booking platform.</td>
+    </tr>
+    <tr>
+      <td>Parkwheels</td>
+      <td>Industrial, Industrial Automation</td>
+      <td>Seed</td>
+      <td>₹12,000,000</td>
+      <td>Haryana, Haryana, India</td>
+      <td>Parkwheels aims at solving the big, bad & unsexy parking problems of India.</td>
+    </tr>
+    <tr>
+      <td>ShareChat</td>
+      <td>Internet, Mobile Apps, Social Network</td>
+      <td>Series C</td>
+      <td>99230000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>ShareChat is a social networking and regional content platform for the fast growing Internet users in India.</td>
+    </tr>
+    <tr>
+      <td>Cyclops Medtech</td>
+      <td>Health Care, Health Diagnostics, Internet of Things, Life Science, Machine Learning, Medical, Medical Device</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Medtech startup working on clinical and wearable diagnostic and rehab products for neuro vestibular disorders using eye tracking technology.</td>
+    </tr>
+    <tr>
+      <td>Livspace</td>
+      <td>E-Commerce, Furniture, Interior Design</td>
+      <td>Series C</td>
+      <td>70000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Livspace is the new online shopping destination where you can design, decorate and furnish your dream home.</td>
+    </tr>
+    <tr>
+      <td>NewsBytes</td>
+      <td>Apps, Events, News</td>
+      <td>Seed</td>
+      <td>1000000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>NewsBytes provides your everyday news in a contextual timeline to reduce information overload.</td>
+    </tr>
+    <tr>
+      <td>Leena AI</td>
+      <td>Artificial Intelligence, Human Resources, Information Services, Information Technology</td>
+      <td>Seed</td>
+      <td>2000000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Leena is smart AI powered HR companion dedicated towards engaging employees.</td>
+    </tr>
+    <tr>
+      <td>Max Healthcare</td>
+      <td>Health Care, Hospital, Supply Chain Management</td>
+      <td>Corporate Round</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Max Healthcare is one of the leading chain of hospitals in India.</td>
+    </tr>
+    <tr>
+      <td>GoBolt</td>
+      <td>Logistics, Railroad, Transportation</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹400,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Delhi-based logistics technology.</td>
+    </tr>
+    <tr>
+      <td>GoGaga</td>
+      <td>Dating, Private Social Networking</td>
+      <td>Non-equity Assistance</td>
+      <td>40000</td>
+      <td>Bangalore City, Karnataka, India</td>
+      <td>GoGaga is a new age dating app that has removed the mindless swiping on strangers and connects users through their network and find matches.</td>
+    </tr>
+    <tr>
+      <td>Mate Labs</td>
+      <td>Artificial Intelligence, Machine Learning, PaaS</td>
+      <td>Seed</td>
+      <td>550000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Mate Labs is a machine learning solutions platform for beginners.</td>
+    </tr>
+    <tr>
+      <td>Furlenco</td>
+      <td>Consumer, Furniture, Home Decor, Home Improvement</td>
+      <td>Series C</td>
+      <td>—</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Furlenco is a Bangalore-based company that offers a home furniture subscription program.</td>
+    </tr>
+    <tr>
+      <td>Ola</td>
+      <td>Apps, E-Commerce, Internet, Mobile, Ride Sharing, Transportation</td>
+      <td>Venture - Series Unknown</td>
+      <td>50000000</td>
+      <td>Kormangala, Karnataka, India</td>
+      <td>Ola is a mobile app that brings together cab drivers and customers using technology to make transportation hassle-free in India.</td>
+    </tr>
+    <tr>
+      <td>DocPrime</td>
+      <td>Health Care, Health Insurance</td>
+      <td>Funding Round</td>
+      <td>50000000</td>
+      <td>Haryana, Haryana, India</td>
+      <td>DocPrime offers a one-stop healthcare solution right at the comfort of patients' homes.</td>
+    </tr>
+    <tr>
+      <td>CLP India Pvt. Ltd.</td>
+      <td>Energy, Natural Resources</td>
+      <td>Private Equity</td>
+      <td>365000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>CLP India Pvt. Ltd. is a foreign investor in the Indian power sector.</td>
+    </tr>
+    <tr>
+      <td>Xplorabox</td>
+      <td>E-Commerce, Education, Health Care</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Noida, Uttar Pradesh, India</td>
+      <td>Xplorabox is as an educational activity box subscription startup aiming to revolutionize the early education industry.</td>
+    </tr>
+    <tr>
+      <td>Myra</td>
+      <td>Apps, Health Care, Pharmaceutical</td>
+      <td>Venture - Series Unknown</td>
+      <td>₹8,750,000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Myra is a unique solution of technology and operations that makes buying medicines fast and efficient.</td>
+    </tr>
+    <tr>
+      <td>Vokal</td>
+      <td>Internet, Knowledge Management</td>
+      <td>Series A</td>
+      <td>1500000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>India's Largest Peer-to-Peer Knowledge Sharing Platform in Indian Languages.</td>
+    </tr>
+    <tr>
+      <td>Kissht</td>
+      <td>Credit, Finance, FinTech, Lending, Sales Automation</td>
+      <td>Series C</td>
+      <td>30000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Kissht is a financial technology platform that enables instant, seamless credit for consumers to make purchases at digital points of sales</td>
+    </tr>
+    <tr>
+      <td>Upwards Fintech</td>
+      <td>Banking, Financial Services, Internet</td>
+      <td>Series A</td>
+      <td>5000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Upwards Fintech financial company.</td>
+    </tr>
+    <tr>
+      <td>Bon(Bonfleet Solutions)</td>
+      <td>Financial Services, FinTech</td>
+      <td>Seed</td>
+      <td>₹78,000,000</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Bon, a Pune-based FinTech firm was created to bring financial services to the gig-economy workforce.</td>
+    </tr>
+    <tr>
+      <td>Mamaearth</td>
+      <td>E-Commerce, Health Care, Retail</td>
+      <td>Series A</td>
+      <td>4000000</td>
+      <td>Gurgaon, Haryana, India</td>
+      <td>Mamaearth is an online retailer specializing in baby and toddler products.</td>
+    </tr>
+    <tr>
+      <td>BabyChakra</td>
+      <td>Child Care, Information Technology</td>
+      <td>Series B</td>
+      <td>—</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>BabyChakra is India's largest & most loved platform to discover the right maternity and childcare.</td>
+    </tr>
+    <tr>
+      <td>Belstar Investment and Finance Private Limited</td>
+      <td>Financial Services, Micro Lending</td>
+      <td>Venture - Series Unknown</td>
+      <td>28000000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Belstar Investment and Finance Private Limited is a provider of scalable microfinance services to entrepreneurs.</td>
+    </tr>
+    <tr>
+      <td>Naaptol</td>
+      <td>E-Commerce, Retail, Shopping</td>
+      <td>Venture - Series Unknown</td>
+      <td>15000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Koku Gamer is an online platform that offers gaming related news, editorials, reviews, previews, and other content.</td>
+    </tr>
+    <tr>
+      <td>Moonshine Meadery</td>
+      <td>Food and Beverage</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Moonshine Meadery is a first craft meadery.</td>
+    </tr>
+    <tr>
+      <td>Verzeo</td>
+      <td>E-Learning</td>
+      <td>Series A</td>
+      <td>5000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Verzeo is anAI-focussed edtech startup.</td>
+    </tr>
+    <tr>
+      <td>Haazri</td>
+      <td>Food and Beverage, Snack Food, Tea</td>
+      <td>Seed</td>
+      <td>₹12,500,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Haazri is a tea and snack quick service restaurant startup</td>
+    </tr>
+    <tr>
+      <td>Connect India</td>
+      <td>Delivery Service, E-Commerce, Logistics</td>
+      <td>Angel</td>
+      <td>—</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>To create pervasive network where connections are simpler, more powerful, more affordable, more global and more available to all.</td>
+    </tr>
+    <tr>
+      <td>Flyrobe</td>
+      <td>Fashion, Lifestyle, Rental</td>
+      <td>Series B</td>
+      <td>₹264,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Flyrobe is an on-demand apparel rental platform that provides premium designer wear.</td>
+    </tr>
+    <tr>
+      <td>Scholify</td>
+      <td>—</td>
+      <td>Pre-Seed</td>
+      <td>—</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Edutech</td>
+    </tr>
+    <tr>
+      <td>Dream11</td>
+      <td>Fantasy Sports, Mobile, Sports</td>
+      <td>Series D</td>
+      <td>100000000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Dream11 is India’s Biggest Sports Game with 30 million+ users playing Fantasy Cricket, Football, Kabaddi and NBA.</td>
+    </tr>
+    <tr>
+      <td>srJna</td>
+      <td>Education</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Jaipur, Rajasthan, India</td>
+      <td>SRJNA is a brand of Elation Edtech Pvt. Ltd., which helps schools to integrate hands on, affordable and turnkey STEM.</td>
+    </tr>
+    <tr>
+      <td>Nykaa</td>
+      <td>Beauty, Fashion, Wellness</td>
+      <td>Secondary Market</td>
+      <td>₹1,130,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Nykaa.com is a premier online beauty and wellness destination</td>
+    </tr>
+    <tr>
+      <td>Chaayos</td>
+      <td>Food and Beverage, Restaurants, Tea</td>
+      <td>Series B</td>
+      <td>₹810,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>Chaayos was born in November 2012 out of this premise - a contemporary interpretation of the chai adda.</td>
+    </tr>
+    <tr>
+      <td>Heelium</td>
+      <td>Fitness, Sporting Goods, Sports</td>
+      <td>Seed</td>
+      <td>—</td>
+      <td>Pune, Maharashtra, India</td>
+      <td>Heelium is an athletic footwear and wearable startup with primary focus on sports safety and sustainability.</td>
+    </tr>
+    <tr>
+      <td>LT Foods</td>
+      <td>Food and Beverage, Food Processing, Manufacturing</td>
+      <td>Post-IPO Equity</td>
+      <td>₹1,400,000,000</td>
+      <td>New Delhi, Delhi, India</td>
+      <td>LT Foods believe that nature will continue to nurture us until we as a species continue to breathe and live.</td>
+    </tr>
+    <tr>
+      <td>Multibashi</td>
+      <td>E-Learning, Internet</td>
+      <td>Seed</td>
+      <td>₹10,000,000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>Free language learning platform.</td>
+    </tr>
+    <tr>
+      <td>Cleardekho</td>
+      <td>Eyewear, Internet</td>
+      <td>Venture - Series Unknown</td>
+      <td>—</td>
+      <td>Ghaziabad, Uttar Pradesh, India</td>
+      <td>Uttar Pradesh based online eyewear marketplace.</td>
+    </tr>
+    <tr>
+      <td>Dailyhunt</td>
+      <td>Information Technology, Mobile, News, Operating Systems, Social Media, Social News</td>
+      <td>Series E</td>
+      <td>6000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>NewsHunt is a Bangalore based eBooks company.</td>
+    </tr>
+    <tr>
+      <td>SlicePay</td>
+      <td>FinTech, Internet, Payments, Service Industry</td>
+      <td>Series A</td>
+      <td>14900000</td>
+      <td>Bengaluru, Karnataka, India</td>
+      <td>SlicePay is an AI based instant credit app for youngsters in India.</td>
+    </tr>
+    <tr>
+      <td>Udaan</td>
+      <td>B2B, Business Development, Internet, Marketplace</td>
+      <td>Series C</td>
+      <td>225000000</td>
+      <td>Bangalore, Karnataka, India</td>
+      <td>Udaan is a B2B trade platform, designed specifically for small and medium businesses in India.</td>
+    </tr>
+    <tr>
+      <td>Happyeasygo Group</td>
+      <td>Tourism, Travel</td>
+      <td>Series A</td>
+      <td>—</td>
+      <td>Haryana, Haryana, India</td>
+      <td>HappyEasyGo is an online travel domain.</td>
+    </tr>
+    <tr>
+      <td>Mombay</td>
+      <td>Food and Beverage, Food Delivery, Internet</td>
+      <td>Seed</td>
+      <td>7500</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Mombay is a unique opportunity for housewives to start household food business and avail everyone with their homemade healthy dishes.</td>
+    </tr>
+    <tr>
+      <td>Droni Tech</td>
+      <td>Information Technology</td>
+      <td>Seed</td>
+      <td>₹35,000,000</td>
+      <td>Mumbai, Maharashtra, India</td>
+      <td>Droni Tech manufacture UAVs and develop software to service a range of industry requirements.</td>
+    </tr>
+    <tr>
+      <td>Netmeds</td>
+      <td>Biotechnology, Health Care, Pharmaceutical</td>
+      <td>Series C</td>
+      <td>35000000</td>
+      <td>Chennai, Tamil Nadu, India</td>
+      <td>Welcome to India's most convenient pharmacy!</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

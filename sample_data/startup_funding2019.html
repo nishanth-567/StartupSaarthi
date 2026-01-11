@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>startup_funding2019</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .info {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Startup Funding2019</h1>
+    
+    <div class="info">
+        <strong>Source:</strong> startup_funding2019.csv<br>
+        <strong>Total Records:</strong> 89<br>
+        <strong>Columns:</strong> 9
+    </div>
+    
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-value">89</div>
+            <div class="stat-label">Total Rows</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">9</div>
+            <div class="stat-label">Total Columns</div>
+        </div>
+    </div>
+    
+    <h2>Data Preview (First 1000 rows)</h2>
+<table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Company/Brand</th>
+      <th>Founded</th>
+      <th>HeadQuarter</th>
+      <th>Sector</th>
+      <th>What it does</th>
+      <th>Founders</th>
+      <th>Investor</th>
+      <th>Amount($)</th>
+      <th>Stage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bombay Shaving</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Ecommerce</td>
+      <td>Provides a range of male grooming products</td>
+      <td>Shantanu Deshpande</td>
+      <td>Sixth Sense Ventures</td>
+      <td>$6,300,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Ruangguru</td>
+      <td>2014.0</td>
+      <td>Mumbai</td>
+      <td>Edtech</td>
+      <td>A learning platform that provides topic-based journey, animated videos, quizzes, infographic and mock tests to students</td>
+      <td>Adamas Belva Syah Devara, Iman Usman.</td>
+      <td>General Atlantic</td>
+      <td>$150,000,000</td>
+      <td>Series C</td>
+    </tr>
+    <tr>
+      <td>Eduisfun</td>
+      <td>NaN</td>
+      <td>Mumbai</td>
+      <td>Edtech</td>
+      <td>It aims to make learning fun via games.</td>
+      <td>Jatin Solanki</td>
+      <td>Deepak Parekh, Amitabh Bachchan, Piyush Pandey</td>
+      <td>$28,000,000</td>
+      <td>Fresh funding</td>
+    </tr>
+    <tr>
+      <td>HomeLane</td>
+      <td>2014.0</td>
+      <td>Chennai</td>
+      <td>Interior design</td>
+      <td>Provides interior designing solutions</td>
+      <td>Srikanth Iyer, Rama Harinath</td>
+      <td>Evolvence India Fund (EIF), Pidilite Group, FJ Labs</td>
+      <td>$30,000,000</td>
+      <td>Series D</td>
+    </tr>
+    <tr>
+      <td>Nu Genes</td>
+      <td>2004.0</td>
+      <td>Telangana</td>
+      <td>AgriTech</td>
+      <td>It is a seed company engaged in production, processing and marketing of seeds</td>
+      <td>Narayana Reddy Punyala</td>
+      <td>Innovation in Food and Agriculture (IFA)</td>
+      <td>$6,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>FlytBase</td>
+      <td>NaN</td>
+      <td>Pune</td>
+      <td>Technology</td>
+      <td>A drone automation platform</td>
+      <td>Nitin Gupta</td>
+      <td>Undisclosed</td>
+      <td>Undisclosed</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Finly</td>
+      <td>NaN</td>
+      <td>Bangalore</td>
+      <td>SaaS</td>
+      <td>It builds software products that makes work simpler, pleasant, and productive</td>
+      <td>Vivek AG, Veekshith C Rai</td>
+      <td>Social Capital, AngelList India, Gemba Capital, Omphalos Ventures,  91springboard via Atal Innovation Mission, Niti Aayog.</td>
+      <td>Undisclosed</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Kratikal</td>
+      <td>2013.0</td>
+      <td>Noida</td>
+      <td>Technology</td>
+      <td>It is a product-based cybersecurity solutions provider</td>
+      <td>Pavan Kushwaha, Paratosh Bansal, Dip Jung Thapa</td>
+      <td>Gilda VC, Art Venture, Rajeev Chitrabhanu.</td>
+      <td>$1,000,000</td>
+      <td>Pre series A</td>
+    </tr>
+    <tr>
+      <td>Quantiphi</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>AI & Tech</td>
+      <td>It is an AI and big data services company providing business solutions.</td>
+      <td>Renuka Ramnath</td>
+      <td>Multiples Alternate Asset Management</td>
+      <td>$20,000,000</td>
+      <td>Series A</td>
+    </tr>
+    <tr>
+      <td>Lenskart</td>
+      <td>2010.0</td>
+      <td>Delhi</td>
+      <td>E-commerce</td>
+      <td>It is a eyewear company</td>
+      <td>Peyush Bansal, Amit Chaudhary, Sumeet Kapahi</td>
+      <td>SoftBank</td>
+      <td>$275,000,000</td>
+      <td>Series G</td>
+    </tr>
+    <tr>
+      <td>Cub McPaws</td>
+      <td>2010.0</td>
+      <td>Mumbai</td>
+      <td>E-commerce & AR</td>
+      <td>A B2C  brand that focusses on premium and comfortable merchandise for Generation Alpha – kids</td>
+      <td>Abhay Bhat, Kinnar Shah</td>
+      <td>Venture Catalysts</td>
+      <td>Undisclosed</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Appnomic</td>
+      <td>NaN</td>
+      <td>Bangalore</td>
+      <td>SaaS</td>
+      <td>It is a self-healing enterprise, the IT operations software detects, predicts and prevents problems before they happen</td>
+      <td>D Padmanabhan</td>
+      <td>Avataar Ventures</td>
+      <td>$22,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Kaleidofin</td>
+      <td>2018.0</td>
+      <td>Chennai</td>
+      <td>Fintech</td>
+      <td>Platform that provides complete financial solutions for excluded individuals and households</td>
+      <td>Puneet Gupta, Sucharita Mukherjee</td>
+      <td>Oikocredit</td>
+      <td>$5,000,000</td>
+      <td>Series A</td>
+    </tr>
+    <tr>
+      <td>JobSquare</td>
+      <td>2019.0</td>
+      <td>Ahmedabad</td>
+      <td>HR tech</td>
+      <td>Technology-based platform that is connecting suitable applicants to the right recruiters</td>
+      <td>Ishit Jethwa</td>
+      <td>Titan Capital</td>
+      <td>$140,500</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Open Secret</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Food tech</td>
+      <td>It produces and sells top quality snacks</td>
+      <td>Ahana Gautam, Udit Kejriwal</td>
+      <td>Matrix Partners</td>
+      <td>Undisclosed</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>LivFin</td>
+      <td>2017.0</td>
+      <td>Delhi</td>
+      <td>Fintech</td>
+      <td>Grants small business loans, supply chain finance and working capital loans to small and medium enterprises</td>
+      <td>Rakesh Malhotra</td>
+      <td>German development finance institution DEG</td>
+      <td>$5,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Byju's</td>
+      <td>2011.0</td>
+      <td>NaN</td>
+      <td>Edtech</td>
+      <td>Provides online learning classes</td>
+      <td>Byju Raveendran</td>
+      <td>South Africa’s Naspers Ventures, the CPP Investment Board</td>
+      <td>$540,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Zest Money</td>
+      <td>2015.0</td>
+      <td>Bangalore</td>
+      <td>Fintech</td>
+      <td>Uses AI to do risk profiling of e-commerce consumers who opt for EMI</td>
+      <td>Chapman, Priya Sharma, Ashish Anantharaman</td>
+      <td>Goldman Sachs.</td>
+      <td>$15,000,000</td>
+      <td>Series B</td>
+    </tr>
+    <tr>
+      <td>Witblox</td>
+      <td>2014.0</td>
+      <td>NaN</td>
+      <td>Edtech</td>
+      <td>Offers a range of robotics learning tools</td>
+      <td>Amit Modi</td>
+      <td>Mumbai Angels Network</td>
+      <td>$182,700</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Azah Personal Care Pvt. Ltd.</td>
+      <td>2018.0</td>
+      <td>Gurugram</td>
+      <td>Health</td>
+      <td>Aims to solve some problems in the feminine hygiene sector</td>
+      <td>Mohammed, Shashwat Diesh</td>
+      <td>Kunal Bahl, Rohit Bansal.</td>
+      <td>Undisclosed</td>
+      <td>Pre series A</td>
+    </tr>
+    <tr>
+      <td>SalaryFits</td>
+      <td>2015.0</td>
+      <td>NaN</td>
+      <td>Fintech</td>
+      <td>A platform that promotes financial well-being of employees at workplace</td>
+      <td>Renato Araujo</td>
+      <td>Brazilian VC Fund Confrapar</td>
+      <td>$5,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Pristyn Care</td>
+      <td>2018.0</td>
+      <td>NaN</td>
+      <td>Healthcare</td>
+      <td>Delivers advanced medical care & clinical excellence aided by next-level technology</td>
+      <td>Harsimarbir Singh, Dr Vaibhav Kapoor, Dr Garima Sawhney</td>
+      <td>Sequoia India, Hummingbird Ventures, Greenoaks Capital, AngelList.</td>
+      <td>$12,000,000</td>
+      <td>Series B</td>
+    </tr>
+    <tr>
+      <td>Springboard</td>
+      <td>2013.0</td>
+      <td>NaN</td>
+      <td>Edtech</td>
+      <td>Offers online courses and extensive mentor-based learning</td>
+      <td>Gautam Tambay, Parul Gupta</td>
+      <td>Reach Capital</td>
+      <td>$11,000,000</td>
+      <td>Post series A</td>
+    </tr>
+    <tr>
+      <td>DROR Labs Pvt. Ltd</td>
+      <td>2018.0</td>
+      <td>Delhi</td>
+      <td>Safety tech</td>
+      <td>It uses technology to create a trust-based network of responsible citizens to ensure safety</td>
+      <td>Dhiraj Naubhar, Dheeraj Bansal</td>
+      <td>Inflection Point Ventures</td>
+      <td>Undisclosed</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Medlife</td>
+      <td>2014.0</td>
+      <td>Bangalore</td>
+      <td>Pharmaceutical</td>
+      <td>It solves inadequacies in the healthcare delivery system through technology</td>
+      <td>Tushar Kumar, Prashant Singh</td>
+      <td>Wilson Global Opportunities Fund</td>
+      <td>$15,500,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Seekify</td>
+      <td>2019.0</td>
+      <td>Delhi</td>
+      <td>SaaS</td>
+      <td>Customer Experience (CX) Automation platform</td>
+      <td>Arihant Jain, Ajeet Kushwaha</td>
+      <td>Sequoia Capita</td>
+      <td>$1,500,000</td>
+      <td>Seed funding</td>
+    </tr>
+    <tr>
+      <td>Toffee Insurance</td>
+      <td>2017.0</td>
+      <td>Haryana</td>
+      <td>Insurance technology</td>
+      <td>Provides variety of insurance plans and policies</td>
+      <td>Nishant Jain, Rohan Kumar</td>
+      <td>IVM Intersurer</td>
+      <td>$5,500,000</td>
+      <td>Series A</td>
+    </tr>
+    <tr>
+      <td>Fireflies .ai</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>AI</td>
+      <td>Developer of an artificial intelligence-powered assistant for businesses</td>
+      <td>Sam Udotong</td>
+      <td>Canaan Partners</td>
+      <td>$5,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>HungerBox</td>
+      <td>2015.0</td>
+      <td>Bangalore</td>
+      <td>Foodtech</td>
+      <td>Offers B2B tech platform to corporates, aimed at improving the operations of their cafeterias</td>
+      <td>Sandipan Mitra, Uttam Kumar</td>
+      <td>Paytm, Asian VC fund NPTK, Sabre Partners, Neoplux.</td>
+      <td>$12,000,000</td>
+      <td>Series C</td>
+    </tr>
+    <tr>
+      <td>Bijak</td>
+      <td>2019.0</td>
+      <td>NaN</td>
+      <td>AgriTech</td>
+      <td>B2B platform for agricultural commodities.</td>
+      <td>Nukul Upadhye, Mahesh Jakhotia, Jitender Bedwal, Daya Rai, Nikhil Tripathi</td>
+      <td>Omnivore and Omidyar Network India, Sequoia Capital</td>
+      <td>$2,500,000</td>
+      <td>Seed fund</td>
+    </tr>
+    <tr>
+      <td>Licious</td>
+      <td>NaN</td>
+      <td>Bangalore</td>
+      <td>Food</td>
+      <td>Online meat shop</td>
+      <td>Vivek Gupta, Abhay Hanjura</td>
+      <td>Vertex Growth Fund</td>
+      <td>$30,000,000</td>
+      <td>Series E</td>
+    </tr>
+    <tr>
+      <td>truMe</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>IoT</td>
+      <td>A global platform for Identity and Access Management</td>
+      <td>Babu Dayal, Pramod Uniyal, Lalit Mehta</td>
+      <td>Rajan Kaistha</td>
+      <td>$140,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Pumpkart</td>
+      <td>2014.0</td>
+      <td>Chandigarh</td>
+      <td>E-marketplace</td>
+      <td>B2B model for appliances and electrical products</td>
+      <td>KS Bhatia</td>
+      <td>Dinesh Dua</td>
+      <td>Undisclosed</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Asteria Aerospace</td>
+      <td>2011.0</td>
+      <td>Bangalore</td>
+      <td>Robotics & AI</td>
+      <td>Develops drones that are used by the military, paramilitary, police forces and in various industries.</td>
+      <td>Neel Mehta, Nihar Vartak</td>
+      <td>Reliance Industries</td>
+      <td>$230,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Rivigo</td>
+      <td>2014.0</td>
+      <td>NaN</td>
+      <td>Logistics</td>
+      <td>It offers delivery services across India to retail, e-commerce, pharmaceutical, automobile and FMCG companies</td>
+      <td>Deepak Garg, Gazal Kalra</td>
+      <td>SAIF Partners India VI Ltd, Spring Canter Investment Ltd</td>
+      <td>$20,000,000</td>
+      <td>Series F</td>
+    </tr>
+    <tr>
+      <td>HappyEasyGo</td>
+      <td>2017.0</td>
+      <td>Gurugram</td>
+      <td>Travel</td>
+      <td>Online flight booking</td>
+      <td>Vivek Prabhakar, Boris Zha</td>
+      <td>Korea Investment Partners (KIP), Samsung Venture Investment Corporation (SVIC), UOB Venture, 10 Fund, CVCapital, Zero2IPO Ventures, M&S Partners</td>
+      <td>$49,400,000</td>
+      <td>Series B+</td>
+    </tr>
+    <tr>
+      <td>Zetwerk</td>
+      <td>2018.0</td>
+      <td>Bangalore</td>
+      <td>Manufacturing</td>
+      <td>Provides facilities to get products manufactured.</td>
+      <td>Amit Acharya, Srinath Ramakkrushnan</td>
+      <td>Lightspeed and Greenoaks Capital, Sequoia India, Accel and Kae Capital</td>
+      <td>$32,000,000</td>
+      <td>Series B</td>
+    </tr>
+    <tr>
+      <td>Observe.AI</td>
+      <td>NaN</td>
+      <td>Bangalore</td>
+      <td>AI</td>
+      <td>Creates a voice AI platform</td>
+      <td>Swapnil</td>
+      <td>Scale Venture Partners</td>
+      <td>$26,000,000</td>
+      <td>Series A</td>
+    </tr>
+    <tr>
+      <td>Freshokartz</td>
+      <td>2016.0</td>
+      <td>Jaipur</td>
+      <td>E-marketplace</td>
+      <td>Online fruits and vegetables delivery company</td>
+      <td>Rajendra Lora</td>
+      <td>ThinkLab</td>
+      <td>$150,000</td>
+      <td>Pre series A</td>
+    </tr>
+    <tr>
+      <td>Lil’ Goodness and sCool meal</td>
+      <td>NaN</td>
+      <td>Bangalore</td>
+      <td>Food & Nutrition</td>
+      <td>It empowers moms to provide the best of foods to their Lil' ones</td>
+      <td>NaN</td>
+      <td>Sajan Pillai, Muthu Krishnan,</td>
+      <td>$400,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Trell</td>
+      <td>2016.0</td>
+      <td>Bangalore</td>
+      <td>Social Media</td>
+      <td>Blogging platform that enables people to create visual collections of their travel and local experiences</td>
+      <td>Pulkit Agrawal, Prashant Sachan, Arun Lodhi, Bimal Kartheek Rebba</td>
+      <td>Ruizheng Investment, Tej Kapoor, Krinshavataram Venkata Vinjamuri, Harsh Shah</td>
+      <td>$2,000,000</td>
+      <td>Pre series A</td>
+    </tr>
+    <tr>
+      <td>VMate</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>A short video platform</td>
+      <td>NaN</td>
+      <td>Alibaba</td>
+      <td>$100,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Bombay Shirt Company</td>
+      <td>2012.0</td>
+      <td>Mumbai</td>
+      <td>E-commerce</td>
+      <td>Online custom shirt brand</td>
+      <td>Akshay Narvekar</td>
+      <td>Lightbox Ventures</td>
+      <td>$8,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Slintel</td>
+      <td>2016.0</td>
+      <td>NaN</td>
+      <td>SaaS</td>
+      <td>It helps sales and marketing teams understand purchase intent of buyers on buying patterns, usage and renewals</td>
+      <td>Deepak Anchala</td>
+      <td>Stellaris Ventures</td>
+      <td>$1,500,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>MyGameMate</td>
+      <td>NaN</td>
+      <td>Bangalore</td>
+      <td>E-Sports</td>
+      <td>eSports platform where players can access various multiplayer mobile games to participate in online tournaments</td>
+      <td>Parshavv Jain& Raju Kushwaha</td>
+      <td>Jindagi Live Angels,</td>
+      <td>$100,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Afinoz</td>
+      <td>NaN</td>
+      <td>Noida</td>
+      <td>Fintech</td>
+      <td>Online financial marketplace for customized rate quotes on loans and investment products in India</td>
+      <td>Rachna Suneja</td>
+      <td>Fintech innovation lab</td>
+      <td>Undisclosed</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Rein Games</td>
+      <td>NaN</td>
+      <td>Noida</td>
+      <td>Technology</td>
+      <td>It develops, publishes and distributes games across various platforms</td>
+      <td>Vaibhav Gupta, Himanshu Devra, Pranav Chaudhary, Nishtha Gupta</td>
+      <td>Manipal Education and Medical Group (MEMG) family office, Titan Capital</td>
+      <td>$50,000,000</td>
+      <td>Pre series A</td>
+    </tr>
+    <tr>
+      <td>Ecozen</td>
+      <td>NaN</td>
+      <td>Pune</td>
+      <td>AgriTech</td>
+      <td>It develops technology-enabled products to strengthen the farm-to-fork value chain of perishables.</td>
+      <td>Devendra Gupta, Prateek Singhal, Vivek Pandey</td>
+      <td>Innovation in Food & Agriculture Fund (IFA Fund)</td>
+      <td>$6,000,000</td>
+      <td>Series A</td>
+    </tr>
+    <tr>
+      <td>Box8</td>
+      <td>2011.0</td>
+      <td>Mumbai</td>
+      <td>Foodtech</td>
+      <td>Enables to order food online</td>
+      <td>Amit Raj, Anshul Gupta</td>
+      <td>Trifecta Capital</td>
+      <td>$120,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Awign Enterprises</td>
+      <td>2016.0</td>
+      <td>Bangalore</td>
+      <td>NaN</td>
+      <td>It supplies workforce to the economy</td>
+      <td>Annanya Sarthak, Gurpreet Singh, Praveen Sah</td>
+      <td>Work10M, Michael and Susan Dell Foundation, Eagle10, Unitus Ventures.</td>
+      <td>$4,000,000</td>
+      <td>Series A</td>
+    </tr>
+    <tr>
+      <td>Purplle</td>
+      <td>2012.0</td>
+      <td>Mumbai</td>
+      <td>Cosmetics</td>
+      <td>Online makeup and beauty products retailer</td>
+      <td>Manish Taneja, Rahul Dash</td>
+      <td>Goldman Sachs</td>
+      <td>$30,000,000</td>
+      <td>Series C</td>
+    </tr>
+    <tr>
+      <td>Freightwalla</td>
+      <td>2017.0</td>
+      <td>Mumbai</td>
+      <td>B2B</td>
+      <td>Provides digital platform for businesses to plan and manage their international freight shipments online</td>
+      <td>Sanjay Bhatia, Bharat Tanvi, Punit Java</td>
+      <td>Amplo, FJ Labs, Rogue One Capital</td>
+      <td>$4,000,000</td>
+      <td>Series A</td>
+    </tr>
+    <tr>
+      <td>TapChief</td>
+      <td>2016.0</td>
+      <td>Bangalore</td>
+      <td>NaN</td>
+      <td>It connects individuals in need of advice in a specific domain to individuals who have expertise in the same</td>
+      <td>Shashank Murali, Binay Krishna, Arjun Krishna</td>
+      <td>Blume Ventures.</td>
+      <td>$1,500,000</td>
+      <td>Pre series A</td>
+    </tr>
+    <tr>
+      <td>eJOHRI</td>
+      <td>2015.0</td>
+      <td>Mumbai</td>
+      <td>Jewellery</td>
+      <td>Omnichannel marketplace for gems and jewellery</td>
+      <td>Jignesh Mehta, Shailen Mehta</td>
+      <td>Rajesh Ranavat</td>
+      <td>$1,000,000</td>
+      <td>Pre series A</td>
+    </tr>
+    <tr>
+      <td>Ninjacart</td>
+      <td>2015.0</td>
+      <td>NaN</td>
+      <td>B2B Supply Chain</td>
+      <td>It connects producers of food directly to retailers, restuarants and service providers.</td>
+      <td>Thirukumaran Nagarajanin, Vasudevan Chinnathambi</td>
+      <td>Walmart, Flipkart</td>
+      <td>Undisclosed</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Binca Games</td>
+      <td>2014.0</td>
+      <td>Mumbai</td>
+      <td>Games</td>
+      <td>It offers games that are available across India and UK.</td>
+      <td>Rubianca Wadhwa, Sahil Wadhwa</td>
+      <td>Sunil Gavaskar</td>
+      <td>Undisclosed</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>KredX</td>
+      <td>NaN</td>
+      <td>Bangalore</td>
+      <td>NaN</td>
+      <td>Invoice discounting platform</td>
+      <td>Manish Kumar</td>
+      <td>Tiger Global Management</td>
+      <td>$26,000,000</td>
+      <td>Series B</td>
+    </tr>
+    <tr>
+      <td>m.Paani</td>
+      <td>NaN</td>
+      <td>Mumbai</td>
+      <td>NaN</td>
+      <td>It digitizes and organises local retailers</td>
+      <td>Akanksha Hazari</td>
+      <td>AC Ventures, Henkel</td>
+      <td>$5,500,000</td>
+      <td>Series A</td>
+    </tr>
+    <tr>
+      <td>Origo</td>
+      <td>2010.0</td>
+      <td>Gurugram</td>
+      <td>AgriTech</td>
+      <td>It provides post-harvest management services for agricultural commodities</td>
+      <td>Mayank Dhanuka, Sunoor Kaul</td>
+      <td>Oikocredit, Caspian SME Impact Fund IV,  Triodos Investment Management</td>
+      <td>$6,800,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>WishADish</td>
+      <td>NaN</td>
+      <td>Delhi</td>
+      <td>Food & tech</td>
+      <td>Provides management solution for restaurants</td>
+      <td>Sawan Kumar, Bhavya Bhambhani</td>
+      <td>Undisclosed</td>
+      <td>$6,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Ecom Express</td>
+      <td>2012.0</td>
+      <td>Gurugram</td>
+      <td>Logistics</td>
+      <td>It is a technology enabled logistics solutions provider to the Indian e-commerce industry</td>
+      <td>Krishnan, Manju Dhawan, K Satyanarayana, Sanjeev Saxena</td>
+      <td>CDC Group</td>
+      <td>$36,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Stanza Living</td>
+      <td>2017.0</td>
+      <td>Delhi</td>
+      <td>Accomodation</td>
+      <td>Provides comfortable and secure accomodation for students</td>
+      <td>Sandeep Dalmia, Anindya Dutta</td>
+      <td>Alteria Capital</td>
+      <td>$5,700,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>PiBeam</td>
+      <td>NaN</td>
+      <td>Chennai</td>
+      <td>Automotive tech</td>
+      <td>It is engaged in building sustainable and affordable micro-mobility electric vehicles</td>
+      <td>Visakh Sasikumar</td>
+      <td>GAIL (India) Ltd</td>
+      <td>$50,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Euler Motors</td>
+      <td>NaN</td>
+      <td>Delhi</td>
+      <td>Automotive tech</td>
+      <td>It is offering mobility as a service</td>
+      <td>Saurav Kumar</td>
+      <td>Blume Ventures, Emergent Ventures</td>
+      <td>$2,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Moms Co</td>
+      <td>NaN</td>
+      <td>New Delhi</td>
+      <td>E-commerce</td>
+      <td>It is into mother and baby care-focused consumer goods</td>
+      <td>Malika Sadani</td>
+      <td>Saama Capital, DSG Consumer Partners</td>
+      <td>$5,000,000</td>
+      <td>Series B</td>
+    </tr>
+    <tr>
+      <td>Cubical Labs</td>
+      <td>2013.0</td>
+      <td>NaN</td>
+      <td>IoT</td>
+      <td>Home automation solution provider</td>
+      <td>Dhruv Ratra, Swati Vyas</td>
+      <td>Rockstud Capital</td>
+      <td>Undisclosed</td>
+      <td>Series B</td>
+    </tr>
+    <tr>
+      <td>Lawyered</td>
+      <td>2015.0</td>
+      <td>Delhi</td>
+      <td>Legal tech</td>
+      <td>It helps to connect to legal advise online</td>
+      <td>Ashish Bhatia, Himanshu Gupta</td>
+      <td>Pramendra Tomar, Ratish Pandey, Munish Bhatia, Sumit Aggarwal</td>
+      <td>$100,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Cuemath</td>
+      <td>2013.0</td>
+      <td>Bangalore</td>
+      <td>Edtech</td>
+      <td>It helps students to learn math online</td>
+      <td>Manan Khurma</td>
+      <td>Manta Ray Ventures Limited, Google’s Capital G, Sequoia India.</td>
+      <td>$5,500,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Licious</td>
+      <td>2015.0</td>
+      <td>Bangalore</td>
+      <td>Food</td>
+      <td>Online meat shop</td>
+      <td>Vivek Gupta, Abhay Hanjura</td>
+      <td>Vertex Ventures</td>
+      <td>$25,000,000</td>
+      <td>Series D</td>
+    </tr>
+    <tr>
+      <td>Nivesh.com</td>
+      <td>2016.0</td>
+      <td>Noida</td>
+      <td>Mutual Funds</td>
+      <td>The platform simplifies the process of investment</td>
+      <td>Anurag Garg, Sridhar Srinivasan</td>
+      <td>Windrose Capital</td>
+      <td>$600,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Zebu</td>
+      <td>2015.0</td>
+      <td>NaN</td>
+      <td>Cybersecurity</td>
+      <td>Platform uses encryption technology to allow businesses to safely store files, invoices, and schedules</td>
+      <td>Team of Waterloo-based software developers</td>
+      <td>Undisclosed</td>
+      <td>$4,000,000</td>
+      <td>Seed round</td>
+    </tr>
+    <tr>
+      <td>Smart Institute</td>
+      <td>NaN</td>
+      <td>Surat</td>
+      <td>Edtech</td>
+      <td>A platform to learn online</td>
+      <td>NaN</td>
+      <td>HNI investors</td>
+      <td>$1,500,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>CarDekho</td>
+      <td>2008.0</td>
+      <td>Jaipur</td>
+      <td>Automobile</td>
+      <td>Enables people to buy and sell new/old cars.</td>
+      <td>Amit Jain</td>
+      <td>Ping An Global Voyager Fund, Hillhouse Capital, Sequoia Capital</td>
+      <td>$70,000,000</td>
+      <td>Series D</td>
+    </tr>
+    <tr>
+      <td>Shadowfax</td>
+      <td>2015.0</td>
+      <td>Bangalore</td>
+      <td>Logistics</td>
+      <td>A platform for delivery services</td>
+      <td>Abhishek Bansal, Vaibhav Khandelwal</td>
+      <td>Flipkart, Eight Roads Ventures, NGP Capital, Qualcomm Ventures, Mirae Asset Naver Fund, World Bank-backed IFC</td>
+      <td>$60,000,000</td>
+      <td>Series D</td>
+    </tr>
+    <tr>
+      <td>Credr</td>
+      <td>2014.0</td>
+      <td>Mumbai</td>
+      <td>Automobile</td>
+      <td>A marketplace to buy and sell used bikes and scooters</td>
+      <td>Mittal</td>
+      <td>Omidyar Network, Eight Roads Ventures, GrowthStory, AngelList</td>
+      <td>$6,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Sportido</td>
+      <td>2015.0</td>
+      <td>Noida</td>
+      <td>Sports</td>
+      <td>It is a sports discovery app that helps to find people and places to play 700+ sports</td>
+      <td>Neeraj Aggarwala, Akhil Ramachandran</td>
+      <td>Inflection Point Ventures, SucSEED Venture Partners.</td>
+      <td>Undisclosed</td>
+      <td>Series B</td>
+    </tr>
+    <tr>
+      <td>Phable</td>
+      <td>2018.0</td>
+      <td>NaN</td>
+      <td>Healthtech</td>
+      <td>It creates an engagement loop between doctors, hospitals, and patients via its app</td>
+      <td>Sumit Sinha</td>
+      <td>LetsVenture, 91 Springboard, IKP Knowledge, Angel investors, AbInbev-Serge DeVos, Wouter Peeters.</td>
+      <td>$220,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Sarva</td>
+      <td>NaN</td>
+      <td>Chennai</td>
+      <td>Yoga & wellness</td>
+      <td>It drives a cultural change in making yoga-based wellness a part of modern lifestyle</td>
+      <td>Sarvesh Shashi</td>
+      <td>Venture fund, Fireside Ventures.</td>
+      <td>$2,800,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>IndyFint</td>
+      <td>2019.0</td>
+      <td>Bangalore</td>
+      <td>Virtual Banking</td>
+      <td>It helps lenders to directly provide short-term loans to merchants, employees, and students</td>
+      <td>Paddy Padmanabhan</td>
+      <td>Saravanan Adiseshan</td>
+      <td>$2,100,000</td>
+      <td>Series A</td>
+    </tr>
+    <tr>
+      <td>Zolostays</td>
+      <td>2015.0</td>
+      <td>NaN</td>
+      <td>Accomodation</td>
+      <td>It offers affordable housing apartments to young professionals and students</td>
+      <td>Akhil Sikri, Nikhil Sikri, Sneha Choudhry</td>
+      <td>Trifecta Capital</td>
+      <td>$7,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Ola</td>
+      <td>2010.0</td>
+      <td>Bangalore</td>
+      <td>Transportation</td>
+      <td>It enables one to book cab online</td>
+      <td>Bhavish Aggarwal, Ankit Bhati</td>
+      <td>Kia Motors, Hyundai</td>
+      <td>$311,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Zoomcar</td>
+      <td>2013.0</td>
+      <td>Bangalore</td>
+      <td>Transport & Rentals</td>
+      <td>A car rental service platform</td>
+      <td>Greg Moran, David Back</td>
+      <td>Zoomcar Inc</td>
+      <td>$4,800,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Kratikal</td>
+      <td>NaN</td>
+      <td>Uttar pradesh</td>
+      <td>Technology</td>
+      <td>Provides cyber security solutions</td>
+      <td>Pavan Kushwaha</td>
+      <td>Gilda VC, Art Venture, Rajeev Chitrabhanu</td>
+      <td>$1,000,000</td>
+      <td>Pre-series A</td>
+    </tr>
+    <tr>
+      <td>Froogal</td>
+      <td>NaN</td>
+      <td>Hyderabad</td>
+      <td>Marketing & Customer loyalty</td>
+      <td>A cloud based Customer Loyalty & Engagement Platform</td>
+      <td>Jeevan Chowdary M, Harshit Harchani</td>
+      <td>US-based angel investors</td>
+      <td>$1,000,000</td>
+      <td>Pre series A</td>
+    </tr>
+    <tr>
+      <td>Infra.Market</td>
+      <td>NaN</td>
+      <td>Mumbai</td>
+      <td>Infratech</td>
+      <td>It connects client requirements to their supply chain infrastructure for ease of ordering, tracking and manufacturing</td>
+      <td>Aaditya Sharda, Souvik Sengupta</td>
+      <td>Tiger Global, Nexus Venture Partners, Accel Partners, Dhruv Agarwala</td>
+      <td>$20,000,000</td>
+      <td>Series A</td>
+    </tr>
+    <tr>
+      <td>Oyo</td>
+      <td>2013.0</td>
+      <td>Gurugram</td>
+      <td>Hospitality</td>
+      <td>Provides rooms for comfortable stay</td>
+      <td>Ritesh Agarwal</td>
+      <td>MyPreferred Transformation, Avendus Finance, SoftBank</td>
+      <td>$693,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>GoMechanic</td>
+      <td>2016.0</td>
+      <td>Delhi</td>
+      <td>Automobile & Technology</td>
+      <td>Find automobile repair and maintenance service providers</td>
+      <td>Amit Bhasin, Kushal Karwa, Nitin Rana, Rishabh Karwa</td>
+      <td>Sequoia Capital</td>
+      <td>$5,000,000</td>
+      <td>Series B</td>
+    </tr>
+    <tr>
+      <td>Spinny</td>
+      <td>2015.0</td>
+      <td>Delhi</td>
+      <td>Automobile</td>
+      <td>Online car retailer</td>
+      <td>Niraj Singh, Ramanshu Mahaur, Ganesh Pawar, Mohit Gupta</td>
+      <td>Norwest Venture Partners, General Catalyst, Fundamentum, Accel Partners</td>
+      <td>$50,000,000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Ess Kay Fincorp</td>
+      <td>NaN</td>
+      <td>Rajasthan</td>
+      <td>Banking</td>
+      <td>Organised Non-Banking Finance Company</td>
+      <td>Rajendra Setia</td>
+      <td>TPG, Norwest Venture Partners, Evolvence India</td>
+      <td>$33,000,000</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
